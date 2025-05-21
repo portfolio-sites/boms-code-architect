@@ -11,35 +11,35 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-grotesk font-bold mb-4">Stephanie Boms</h3>
             <p className="text-white/80 mb-4 font-normal">Backend systems engineer & technical advisor</p>
-            <div className="flex space-x-2">
+            <div className="flex gap-1">
               <a 
                 href="https://www.linkedin.com/in/stephanie-boms-07" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={18} />
+                <Linkedin size={16} />
                 <span className="sr-only">Connect</span>
               </a>
               <a 
                 href="https://github.com/steffanie07" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                 aria-label="GitHub"
               >
-                <Github size={18} />
+                <Github size={16} />
                 <span className="sr-only">GitHub</span>
               </a>
               <a 
                 href="https://charisintelligence.com.ng/team-members/" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                className="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                 aria-label="Board Member"
               >
-                <ExternalLink size={18} />
+                <ExternalLink size={16} />
                 <span className="sr-only">Board Member</span>
               </a>
             </div>
