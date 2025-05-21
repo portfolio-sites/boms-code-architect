@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
 
@@ -32,7 +32,6 @@ const Contact = () => {
     setIsSubmitting(true);
     
     // Form submission logic - this would typically be an API call
-    // Here we'll simulate sending to the email address
     setTimeout(() => {
       const formData = {
         to: "Steffanie07@gmail.com",
@@ -59,14 +58,14 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="py-16 md:py-24 bg-white">
+    <section id="contact" className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2">Let's Talk.</h2>
-            <Separator className="w-16 h-1 bg-deep-blue mx-auto mb-8" />
-            <p className="text-lg max-w-2xl mx-auto">
-              Interested in working together, booking me for a session, or getting a technical referral? Use the form below or reach out via email.
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Let's Connect</h2>
+            <Separator className="w-16 h-1 bg-[#2563EB] mx-auto mb-8" />
+            <p className="text-lg max-w-2xl mx-auto text-[#6B7280]">
+              Interested in working together, booking me for a session, or getting a technical referral? Use the form below or reach out directly.
             </p>
           </div>
           
@@ -74,7 +73,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-[#1F2937]">
                     Name
                   </label>
                   <Input
@@ -83,12 +82,13 @@ const Contact = () => {
                     value={formState.name}
                     onChange={handleChange}
                     placeholder="Your name"
+                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-[#1F2937]">
                     Email
                   </label>
                   <Input
@@ -98,16 +98,17 @@ const Contact = () => {
                     value={formState.email}
                     onChange={handleChange}
                     placeholder="Your email address"
+                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="purpose" className="block text-sm font-medium mb-1">
+                  <label htmlFor="purpose" className="block text-sm font-medium mb-1 text-[#1F2937]">
                     Purpose
                   </label>
                   <Select value={formState.purpose} onValueChange={handleSelectChange}>
-                    <SelectTrigger>
+                    <SelectTrigger className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]">
                       <SelectValue placeholder="Select purpose" />
                     </SelectTrigger>
                     <SelectContent>
@@ -121,7 +122,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-[#1F2937]">
                     Message
                   </label>
                   <Textarea
@@ -131,6 +132,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     rows={4}
+                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
                     required
                   />
                 </div>
@@ -138,49 +140,52 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-deep-blue hover:bg-deep-blue/90 text-white"
+                className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
             
-            <div className="space-y-8">
-              <div className="p-6 bg-gray-50 rounded-lg">
+            <div className="space-y-6">
+              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-deep-blue rounded-full flex items-center justify-center">
+                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="font-grotesk text-lg font-bold">Email</h3>
+                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Email</h3>
                 </div>
-                <p className="font-medium">Steffanie07@gmail.com</p>
+                <p className="font-medium text-[#6B7280]">Steffanie07@gmail.com</p>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg">
-                <h3 className="font-grotesk text-lg font-bold mb-4">Location</h3>
-                <p>Swieqi, Malta</p>
+              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
+                    <MapPin className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Location</h3>
+                </div>
+                <p className="font-medium text-[#6B7280]">Swieqi, Malta</p>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg">
-                <h3 className="font-grotesk text-lg font-bold mb-4">Available for</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
-                    <span>Remote consulting</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
-                    <span>Technical advisory roles</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
-                    <span>Speaking engagements</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
-                    <span>Project-based collaborations</span>
-                  </li>
-                </ul>
+              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
+                    <Phone className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Phone</h3>
+                </div>
+                <p className="font-medium text-[#6B7280]">(+356) 999-75-222</p>
+              </div>
+              
+              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
+                    <Linkedin className="h-5 w-5 text-white" />
+                  </div>
+                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">LinkedIn</h3>
+                </div>
+                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2563EB] hover:underline">www.linkedin.com/in/stephanie-boms-07</a>
               </div>
             </div>
           </div>

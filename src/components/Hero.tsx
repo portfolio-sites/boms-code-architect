@@ -13,7 +13,7 @@ const Hero = () => {
   
   // Dynamic tech stack animation
   const [currentTechIndex, setCurrentTechIndex] = useState(0);
-  const techStack = ["Laravel", "PHP", "Java", "React", "MongoDB", "Docker", "Symfony", "Next.js"];
+  const techStack = ["Laravel", "PHP", "Java", "React", ".NET", "Vue.js", "Symfony", "Next.js"];
   
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="bg-deep-blue min-h-screen flex items-center relative overflow-hidden">
-      {/* Background pattern */}
+      {/* Dynamic background pattern */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover bg-no-repeat opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-deep-blue via-deep-blue to-deep-blue/90"></div>
       
@@ -43,26 +43,27 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-4 md:px-8 py-16 md:py-24 relative z-10">
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="max-w-3xl mx-auto md:mx-0">
           <div className="mb-3 text-white/70 text-xl">
             <span className="font-mono animate-pulse inline-block">&lt;</span>
             <span className="font-mono animate-pulse inline-block">{techStack[currentTechIndex]}</span>
             <span className="font-mono animate-pulse inline-block">/&gt;</span>
           </div>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-            Architecting Robust<br /> Enterprise Solutions
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-in">
+            Hi, I'm Stephanie Boms<br />
+            <span className="text-3xl md:text-4xl lg:text-5xl text-white/90">Dynamic Software Developer & Team Lead</span>
           </h1>
           <p className="text-white/80 text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in" style={{animationDelay: "0.2s"}}>
-            Senior full-stack developer with expertise across government, fintech & gaming sectors. Delivering scalable systems that withstand real-world demands.
+            Based in Swieqi, Malta. I bring over a decade of experience delivering secure, scalable software solutions across healthcare, fintech, gaming, and government sectors.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
               size="lg" 
               onClick={() => scrollToSection('contact')}
-              className="bg-white text-deep-blue hover:bg-white/90 text-lg font-medium hover:scale-105 transition-transform"
+              className="bg-[#2563EB] text-white hover:bg-[#1D4ED8] text-lg font-medium hover:scale-105 transition-transform"
             >
-              Let's Talk
+              Get in Touch
             </Button>
             <Button 
               size="lg" 
