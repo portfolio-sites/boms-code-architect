@@ -41,6 +41,32 @@ const About = () => {
 
     return () => clearInterval(interval);
   }, []);
+  
+  // Skills animation
+  const [currentSkillCategory, setCurrentSkillCategory] = useState(0);
+  
+  const skillCategories = [
+    {
+      title: "Backend & APIs",
+      skills: ["Laravel", "PHP", "Java", "Symfony", ".NET", "MongoDB", "MySQL", "PostgreSQL"]
+    },
+    {
+      title: "Frontend & Mobile",
+      skills: ["React", "Angular", "Vue.js", "Next.js", "React Native", "Flutter", "JavaScript", "jQuery"]
+    },
+    {
+      title: "DevOps & Tools",
+      skills: ["Docker", "SEO", "Google Analytics", "Git", "CI/CD", "WordPress", "Google Tag Manager"]
+    }
+  ];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSkillCategory((prev) => (prev + 1) % skillCategories.length);
+    }, 4000);
+    
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
@@ -51,45 +77,52 @@ const About = () => {
           
           <div className="prose prose-lg max-w-none">
             <p className="mb-4 text-lg">
-              I'm a backend systems engineer with over 10 years of experience designing and building reliable, scalable systems across startups, governments, and regulated industries like healthcare and fintech.
+              I'm a seasoned software developer with over 10 years of experience designing and building reliable, scalable systems across government sectors, fintech, gaming, and healthcare industries.
             </p>
             
             <p className="mb-4 text-lg">
-              My core strength lies in breaking complex technical challenges into real, reliable infrastructure — whether it's an API powering a national health platform, a system that needs to scale under pressure, or a fintech service that must be airtight.
+              My core strength lies in full-stack development, particularly backend architecture — whether it's building APIs for national healthcare platforms, developing fintech applications with Java, or creating scalable systems using Laravel and Vue.js.
             </p>
             
             <p className="mb-4 text-lg">
-              I've led backend teams, advised founders, audited enterprise codebases, and helped cross-functional teams align around the right tech decisions. I bring deep technical clarity and long-term thinking to every project.
+              I've worked with organizations across multiple countries including the UK, Nigeria, Malta, Germany, Scotland, and Cyprus, bringing technical expertise and cross-cultural collaboration to every project.
             </p>
             
-            <p className="mb-4 text-lg">
-              Beyond my technical work, I've been a mentor for women in tech at Resplash Academy since 2019, and I spoke at the official Girls in ICT events in 2015 and 2016 to inspire senior secondary girls interested in STEM. In December, I was invited to speak at a webinar for Charis Intelligence in Lagos, where I also serve on the board of directors.
-            </p>
-            
-            <p className="mb-4 text-lg">
-              For the fun side of life, I volunteer at a pet shelter here in Malta, and I'm also a proud karaoke champion!
-            </p>
+            <div className="my-8 p-6 bg-gray-50 rounded-lg shadow-sm transition-all duration-500">
+              <h3 className="font-bold text-xl mb-4">{skillCategories[currentSkillCategory].title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {skillCategories[currentSkillCategory].skills.map((skill, index) => (
+                  <span 
+                    key={index} 
+                    className="px-3 py-1 bg-deep-blue/10 text-deep-blue rounded-full text-sm animate-fade-in"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
             
             <p className="text-lg font-medium">
-              If you care about building systems that won't break when it matters — I'd love to talk.
+              If you're looking for a developer who can build robust, scalable systems that stand the test of time — I'd love to talk.
             </p>
           </div>
         </div>
         
         <div className="mt-16 grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
             <h3 className="font-grotesk text-xl font-bold mb-2">{counts.years}+</h3>
             <p className="text-gray-600">Years of technical experience</p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
             <h3 className="font-grotesk text-xl font-bold mb-2">{counts.countries}+</h3>
             <p className="text-gray-600">Countries worked with</p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
             <h3 className="font-grotesk text-xl font-bold mb-2">{counts.systems}+</h3>
             <p className="text-gray-600">Enterprise systems delivered</p>
           </div>
-          <div className="bg-gray-50 p-6 rounded-lg shadow-sm">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
             <h3 className="font-grotesk text-xl font-bold mb-2">{counts.leadership}+</h3>
             <p className="text-gray-600">Technical leadership roles</p>
           </div>
