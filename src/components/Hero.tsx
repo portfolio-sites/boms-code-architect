@@ -64,7 +64,7 @@ const Hero = () => {
             <Button 
               size="lg" 
               onClick={() => scrollToSection('projects')}
-              className="bg-[#FF6F61] text-white hover:bg-[#E85A4F] text-lg font-medium hover:scale-105 transition-transform px-9 py-7"
+              className="bg-[#2563EB] text-white hover:bg-[#1D4ED8] text-lg font-medium hover:scale-105 transition-transform px-9 py-7"
             >
               Explore My Projects
             </Button>
