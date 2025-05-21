@@ -1,11 +1,19 @@
 
 /* Minimal base styles - overridden by Tailwind */
 :root {
-  --primary-color: #3B82F6;
-  --secondary-color: #14B8A6;
-  --accent-color: #DBEAFE;
+  --primary-color: #10B981;
+  --secondary-color: #A855F7;
+  --accent-color: #F5F3FF;
   --text-color: #1F2937;
   --bg-color: #FFFFFF;
+}
+
+.dark {
+  --primary-color: #10B981;
+  --secondary-color: #A855F7;
+  --accent-color: #2D2D2D;
+  --text-color: #F3F4F6;
+  --bg-color: #121212;
 }
 
 #root {
@@ -24,7 +32,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em rgba(59, 130, 246, 0.3));
+  filter: drop-shadow(0 0 2em rgba(16, 185, 129, 0.3));
 }
 
 @keyframes logo-spin {
@@ -44,7 +52,7 @@
 
 /* Modern elements */
 .modern-accent {
-  background: linear-gradient(90deg, #3B82F6, #14B8A6, #3B82F6);
+  background: linear-gradient(90deg, #10B981, #A855F7, #10B981);
   background-size: 200% auto;
   animation: shimmer 3s infinite linear;
 }
@@ -59,7 +67,7 @@
 }
 
 .subtle-border {
-  border: 1px solid rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 /* Modern card effects */
@@ -71,24 +79,42 @@
   transition: all 0.3s ease;
 }
 
+.dark .modern-card {
+  background-color: #1E1E1E;
+  box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.15);
+}
+
 .modern-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.08);
 }
 
+.dark .modern-card:hover {
+  box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.2);
+}
+
 .modern-button {
-  background: linear-gradient(90deg, #3B82F6, #2563EB);
+  background: linear-gradient(90deg, #10B981, #059669);
   color: white;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
   border-radius: 0.375rem;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.dark .modern-button {
+  background: linear-gradient(90deg, #059669, #047857);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.2);
 }
 
 .modern-button:hover {
-  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.2);
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.2);
   transform: translateY(-1px);
+}
+
+.dark .modern-button:hover {
+  box-shadow: 0 6px 16px rgba(16, 185, 129, 0.3);
 }
 
 /* Decorative elements */
@@ -100,10 +126,18 @@
   max-width: 100px;
 }
 
+.dark .subtle-divider {
+  background: linear-gradient(90deg, transparent, #4B5563, transparent);
+}
+
 /* Modern typography */
 .modern-heading {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   letter-spacing: -0.02em;
   color: #1F2937;
+}
+
+.dark .modern-heading {
+  color: #F3F4F6;
 }

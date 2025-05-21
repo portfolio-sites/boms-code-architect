@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -67,7 +66,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Modern minimal color palette
+				// Modern minimal accessible color palette (no blues)
 				'slate-50': '#F8FAFC',
 				'slate-100': '#F1F5F9',
 				'slate-200': '#E2E8F0',
@@ -78,19 +77,23 @@ export default {
 				'slate-700': '#334155',
 				'slate-800': '#1E293B',
 				'slate-900': '#0F172A',
-				'blue-50': '#EFF6FF',
-				'blue-100': '#DBEAFE',
-				'blue-200': '#BFDBFE',
-				'blue-300': '#93C5FD',
-				'blue-400': '#60A5FA',
-				'blue-500': '#3B82F6',
-				'blue-600': '#2563EB',
-				'blue-700': '#1D4ED8',
-				'teal-50': '#F0FDFA',
-				'teal-100': '#CCFBF1',
-				'teal-200': '#99F6E4',
-				'teal-500': '#14B8A6',
-				'teal-600': '#0D9488',
+				'emerald-50': '#ECFDF5',
+				'emerald-100': '#D1FAE5',
+				'emerald-500': '#10B981',
+				'emerald-600': '#059669',
+				'emerald-700': '#047857',
+				'amber-50': '#FFFBEB',
+				'amber-100': '#FEF3C7',
+				'amber-500': '#F59E0B',
+				'amber-600': '#D97706',
+				'purple-50': '#FAF5FF',
+				'purple-100': '#F3E8FF',
+				'purple-500': '#A855F7',
+				'purple-600': '#9333EA',
+				'fuchsia-50': '#FDF4FF',
+				'fuchsia-100': '#FAE8FF',
+				'fuchsia-500': '#D946EF',
+				'fuchsia-600': '#C026D3',
 				'gray-50': '#F9FAFB',
 				'gray-100': '#F3F4F6',
 				'gray-200': '#E5E7EB',
@@ -100,7 +103,7 @@ export default {
 				'gray-600': '#4B5563',
 				'gray-700': '#374151',
 				'gray-800': '#1F2937',
-				'navy': '#0F172A',
+				'gray-900': '#111827',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -58,13 +58,13 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-semibold mb-2 text-gray-800">Let's Connect</h2>
-            <Separator className="w-16 h-0.5 bg-blue-400 mx-auto mb-6" />
-            <p className="text-lg max-w-2xl mx-auto text-gray-600">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Let's Connect</h2>
+            <Separator className="w-16 h-0.5 bg-emerald-400 mx-auto mb-6" />
+            <p className="text-lg max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
               Interested in working together, booking me for a session, or getting a technical referral? Use the form below or reach out directly.
             </p>
           </div>
@@ -73,7 +73,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
                     Name
                   </label>
                   <Input
@@ -82,13 +82,13 @@ const Contact = () => {
                     value={formState.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="border-gray-200 focus:border-blue-300 focus:ring-blue-200"
+                    className="border-gray-200 dark:border-gray-700 focus:border-emerald-300 focus:ring-emerald-200 dark:focus:border-emerald-600 dark:focus:ring-emerald-800"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
                     Email
                   </label>
                   <Input
@@ -98,17 +98,17 @@ const Contact = () => {
                     value={formState.email}
                     onChange={handleChange}
                     placeholder="Your email address"
-                    className="border-gray-200 focus:border-blue-300 focus:ring-blue-200"
+                    className="border-gray-200 dark:border-gray-700 focus:border-emerald-300 focus:ring-emerald-200 dark:focus:border-emerald-600 dark:focus:ring-emerald-800"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="purpose" className="block text-sm font-medium mb-1 text-gray-700">
+                  <label htmlFor="purpose" className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
                     Purpose
                   </label>
                   <Select value={formState.purpose} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="border-gray-200 focus:border-blue-300 focus:ring-blue-200">
+                    <SelectTrigger className="border-gray-200 dark:border-gray-700 focus:border-emerald-300 focus:ring-emerald-200 dark:focus:border-emerald-600 dark:focus:ring-emerald-800">
                       <SelectValue placeholder="Select purpose" />
                     </SelectTrigger>
                     <SelectContent>
@@ -122,7 +122,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700">
+                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-300">
                     Message
                   </label>
                   <Textarea
@@ -132,7 +132,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     rows={4}
-                    className="border-gray-200 focus:border-blue-300 focus:ring-blue-200"
+                    className="border-gray-200 dark:border-gray-700 focus:border-emerald-300 focus:ring-emerald-200 dark:focus:border-emerald-600 dark:focus:ring-emerald-800"
                     required
                   />
                 </div>
@@ -140,7 +140,7 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white dark:bg-emerald-600 dark:hover:bg-emerald-700"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
@@ -148,36 +148,36 @@ const Contact = () => {
             </form>
             
             <div className="space-y-5">
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100">
+              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
                     <Mail className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-800">Email</h3>
+                  <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">Email</h3>
                 </div>
-                <a href="mailto:Steffanie07@gmail.com" className="font-medium text-blue-600 hover:underline">
+                <a href="mailto:Steffanie07@gmail.com" className="font-medium text-emerald-600 hover:underline dark:text-emerald-400">
                   Steffanie07@gmail.com
                 </a>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100">
+              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-800">Current Location</h3>
+                  <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">Current Location</h3>
                 </div>
-                <p className="font-medium text-gray-600">Swieqi, Malta</p>
+                <p className="font-medium text-gray-600 dark:text-gray-300">Swieqi, Malta</p>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100">
+              <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-700">
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-emerald-500 rounded-lg flex items-center justify-center">
                     <Linkedin className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="text-lg font-medium text-gray-800">LinkedIn</h3>
+                  <h3 className="text-lg font-medium text-gray-800 dark:text-gray-100">LinkedIn</h3>
                 </div>
-                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-blue-600 hover:underline">
+                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-emerald-600 hover:underline dark:text-emerald-400">
                   Connect
                 </a>
               </div>

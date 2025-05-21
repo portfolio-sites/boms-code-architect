@@ -1,3 +1,7 @@
+
+import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -9,9 +13,7 @@ import Speaking from "@/components/Speaking";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
-import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -62,7 +64,7 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#F9FAFB]">
+    <div className="min-h-screen flex flex-col overflow-x-hidden bg-gray-50 dark:bg-gray-900">
       <Navbar />
       <Hero />
       <About />
@@ -75,17 +77,22 @@ const Index = () => {
       <Contact />
       <Footer />
       
-      {showScrollButton && (
-        <Button 
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-[#2563EB] text-white p-3 rounded-full shadow-xl hover:bg-[#1D4ED8] transition-all z-50 hover:scale-110"
-          variant="default"
-          size="icon"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={24} />
-        </Button>
-      )}
+      {/* Theme toggle and scroll to top buttons */}
+      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <ThemeToggle />
+        
+        {showScrollButton && (
+          <Button 
+            onClick={scrollToTop}
+            className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white p-3 rounded-full shadow-xl transition-all hover:scale-110"
+            variant="default"
+            size="icon"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={24} />
+          </Button>
+        )}
+      </div>
       
       <style>
         {`
