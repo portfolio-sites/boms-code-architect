@@ -80,6 +80,7 @@ export default {
 				'soft-gold': '#F0E6BF',
 				'soft-burgundy': '#8E3636',
 				'soft-emerald': '#36634C',
+				'royal-blue': '#2563EB', // Added royal-blue color
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
