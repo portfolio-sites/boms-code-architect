@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-grotesk font-bold mb-4">Stephanie Boms</h3>
             <p className="text-white/80 mb-4 font-normal">Backend systems engineer & technical advisor</p>
-            <div className="flex space-x-3">
+            <div className="flex space-x-2">
               <a 
                 href="https://www.linkedin.com/in/stephanie-boms-07" 
                 target="_blank" 
