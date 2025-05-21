@@ -114,16 +114,17 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">Selected Work</h2>
-          <Separator className="w-16 h-1 bg-deep-blue mx-auto mb-8" />
+          <Separator className="w-16 h-1 bg-deep-blue mx-auto mb-6" />
+          <p className="text-gray-600 mb-8">Dive into some of my most impactful projects and technical accomplishments</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <Dialog key={project.id}>
               <DialogTrigger asChild>
-                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer transform hover:-translate-y-1 transition-transform duration-300">
                   <CardHeader>
                     <Badge className={`mb-2 ${getBadgeColorClasses(project.badgeColor)} w-fit`}>
                       {project.category}
@@ -139,6 +140,11 @@ const Projects = () => {
                     <div>
                       <p className="font-medium">Technologies:</p>
                       <p className="font-mono text-sm">{project.technologies}</p>
+                    </div>
+                    <div className="pt-2">
+                      <Button variant="outline" size="sm" className="text-deep-blue hover:text-white hover:bg-deep-blue">
+                        View Details
+                      </Button>
                     </div>
                   </CardContent>
                 </Card>
@@ -176,14 +182,14 @@ const Projects = () => {
                 
                 <DialogFooter className="flex flex-col sm:flex-row gap-2 sm:justify-end">
                   {project.githubLink && (
-                    <Button variant="outline" onClick={() => window.open(project.githubLink, '_blank')} className="w-full sm:w-auto">
+                    <Button variant="outline" onClick={() => window.open(project.githubLink, '_blank')} className="w-full sm:w-auto font-medium">
                       <Github className="mr-2 h-4 w-4" />
                       View Code
                     </Button>
                   )}
                   
                   {project.liveLink && (
-                    <Button onClick={() => window.open(project.liveLink, '_blank')} className="w-full sm:w-auto">
+                    <Button onClick={() => window.open(project.liveLink, '_blank')} className="w-full sm:w-auto bg-deep-blue hover:bg-deep-blue/90 text-white font-medium">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </Button>
