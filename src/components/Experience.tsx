@@ -104,14 +104,22 @@ const Experience = () => {
     );
   };
 
+  // Companies I've worked at - Logos display
+  const companyLogos = [
+    { name: "MTC Media", logo: "/lovable-uploads/e9ba93a9-bc30-4911-9119-7e316fb0ef99.png", description: "Laravel & Vue.js Development" },
+    { name: "MTech Communications", logo: "/lovable-uploads/4406eb65-8acc-411b-97f3-bb0179745128.png", description: "Java & React Native Development" },
+    { name: "Cursor", color: "from-blue-500 to-purple-600", description: "Healthcare System Architecture" },
+    { name: "Dukka", color: "from-green-500 to-blue-600", description: "Java API Development" }
+  ];
+
   return (
     <section id="experience" className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Professional Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Companies I've Worked With</h2>
           <Separator className="w-16 h-1 bg-deep-blue mb-6" />
           <p className="text-lg text-[#6B7280]">
-            Over a decade of experience building enterprise systems across government, fintech, healthcare, and gaming sectors.
+            Building enterprise systems across government, fintech, healthcare, and gaming sectors.
           </p>
         </div>
         
@@ -199,6 +207,29 @@ const Experience = () => {
                 </div>
               </div>
             </Card>
+          </div>
+        </div>
+        
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-6">Featured Companies</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+            {companyLogos.map((company, index) => (
+              <div key={index} className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center h-full">
+                {company.logo ? (
+                  <img 
+                    src={company.logo} 
+                    alt={`${company.name} logo`} 
+                    className="max-w-full h-16 object-contain mb-2"
+                  />
+                ) : (
+                  <div className={`h-16 w-16 rounded-full bg-gradient-to-br ${company.color} flex items-center justify-center text-white text-xl font-bold mb-2`}>
+                    {company.name.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase()}
+                  </div>
+                )}
+                <p className="font-medium text-center text-sm mt-2">{company.name}</p>
+                <p className="text-xs text-gray-500 text-center">{company.description}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

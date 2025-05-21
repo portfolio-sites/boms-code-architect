@@ -64,7 +64,7 @@ const Index = () => {
   
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#F9FAFB]">
-      <Navbar activeSection={activeSection} />
+      <Navbar />
       <Hero />
       <About />
       <Expertise />
@@ -89,7 +89,8 @@ const Index = () => {
       )}
       
       {/* Add some custom styles for transitions */}
-      <style jsx global>{`
+      <style global>
+        {`
         @keyframes growWidth {
           from { width: 0; }
           to { width: 100%; }
@@ -111,7 +112,8 @@ const Index = () => {
             transform: translateY(0);
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };

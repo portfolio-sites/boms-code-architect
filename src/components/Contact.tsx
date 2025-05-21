@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
+import { Mail, MapPin, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
 
@@ -155,7 +155,9 @@ const Contact = () => {
                   </div>
                   <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Email</h3>
                 </div>
-                <p className="font-medium text-[#6B7280]">Steffanie07@gmail.com</p>
+                <a href="mailto:Steffanie07@gmail.com" className="font-medium text-[#2563EB] hover:underline">
+                  Steffanie07@gmail.com
+                </a>
               </div>
               
               <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
@@ -163,19 +165,9 @@ const Contact = () => {
                   <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
-                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Location</h3>
+                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Current Location</h3>
                 </div>
                 <p className="font-medium text-[#6B7280]">Swieqi, Malta</p>
-              </div>
-              
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-white" />
-                  </div>
-                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Phone</h3>
-                </div>
-                <p className="font-medium text-[#6B7280]">(+356) 999-75-222</p>
               </div>
               
               <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
@@ -185,7 +177,9 @@ const Contact = () => {
                   </div>
                   <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">LinkedIn</h3>
                 </div>
-                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2563EB] hover:underline">www.linkedin.com/in/stephanie-boms-07</a>
+                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2563EB] hover:underline">
+                  www.linkedin.com/in/stephanie-boms-07
+                </a>
               </div>
             </div>
           </div>
