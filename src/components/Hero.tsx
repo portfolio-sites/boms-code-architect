@@ -24,10 +24,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="bg-deep-blue min-h-screen flex items-center relative overflow-hidden">
+    <section id="hero" className="bg-[#0A1F44] min-h-screen flex items-center relative overflow-hidden">
       {/* Dynamic background pattern */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover bg-no-repeat opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-deep-blue via-deep-blue to-deep-blue/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44] via-[#0A1F44] to-[#0A1F44]/90"></div>
       
       {/* Animated grid lines */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
@@ -43,35 +43,38 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 py-20">
         <div className="max-w-3xl mx-auto md:mx-0">
-          <div className="mb-3 text-white/70 text-xl">
+          <div className="mb-3 text-[#A3B1C6] text-xl">
             <span className="font-mono animate-pulse inline-block">&lt;</span>
             <span className="font-mono animate-pulse inline-block">{techStack[currentTechIndex]}</span>
             <span className="font-mono animate-pulse inline-block">/&gt;</span>
           </div>
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-in">
-            Hi, I'm Stephanie Boms<br />
-            <span className="text-3xl md:text-4xl lg:text-5xl text-white/90">Dynamic Software Developer & Team Lead</span>
+            Stephanie Boms<br />
+            <span className="text-3xl md:text-4xl lg:text-5xl text-white/90">Software Developer & Team Lead</span>
           </h1>
-          <p className="text-white/80 text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in" style={{animationDelay: "0.2s"}}>
-            Based in Swieqi, Malta. I bring over a decade of experience delivering secure, scalable software solutions across healthcare, fintech, gaming, and government sectors.
+          <h2 className="text-[#A3B1C6] text-xl md:text-2xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
+            Leading backend teams to build the reliable systems real-world operations depend on.
+          </h2>
+          <p className="text-[#D6DDEA] text-lg md:text-xl mb-8 max-w-2xl animate-fade-in" style={{animationDelay: "0.2s"}}>
+            Based in Swieqi, Malta, Stephanie brings over 10 years of experience crafting secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
               size="lg" 
-              onClick={() => scrollToSection('contact')}
-              className="bg-[#2563EB] text-white hover:bg-[#1D4ED8] text-lg font-medium hover:scale-105 transition-transform"
+              onClick={() => scrollToSection('projects')}
+              className="bg-[#FF6F61] text-white hover:bg-[#E85A4F] text-lg font-medium hover:scale-105 transition-transform px-9 py-7"
             >
-              Get in Touch
+              Explore My Projects
             </Button>
             <Button 
               size="lg" 
               variant="outline"
-              onClick={() => scrollToSection('projects')}
+              onClick={() => scrollToSection('contact')}
               className="border-white text-white hover:bg-white/10 hover:text-white text-lg font-medium"
             >
-              View My Work
+              Get in Touch
             </Button>
           </div>
         </div>
