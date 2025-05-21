@@ -4,9 +4,9 @@ import { Github, Linkedin, ExternalLink, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#0A1F44] to-[#151934] text-white py-12 relative">
+    <footer className="bg-gradient-to-b from-[#1D4ED8] to-[#0A1F44] text-white py-12 relative">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Column 1 - Logo and social links */}
           <div>
             <h3 className="text-xl font-grotesk font-bold mb-4">Stephanie Boms</h3>
@@ -45,29 +45,7 @@ const Footer = () => {
             </div>
           </div>
           
-          {/* Column 2 - Quick links */}
-          <div>
-            <h3 className="text-lg font-grotesk font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="#about" className="text-white/80 hover:text-white transition-colors font-normal">About</a>
-              </li>
-              <li>
-                <a href="#expertise" className="text-white/80 hover:text-white transition-colors font-normal">Services</a>
-              </li>
-              <li>
-                <a href="#projects" className="text-white/80 hover:text-white transition-colors font-normal">Projects</a>
-              </li>
-              <li>
-                <a href="#contact" className="text-white/80 hover:text-white transition-colors font-normal">Contact</a>
-              </li>
-              <li>
-                <a href="#awards" className="text-white/80 hover:text-white transition-colors font-normal">Fun Stuff</a>
-              </li>
-            </ul>
-          </div>
-          
-          {/* Column 3 - Contact */}
+          {/* Column 2 - Contact */}
           <div>
             <h3 className="text-lg font-grotesk font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
