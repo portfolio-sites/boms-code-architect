@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
 import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -51,13 +52,15 @@ const Index = () => {
       <Footer />
       
       {showScrollButton && (
-        <button 
+        <Button 
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-deep-blue text-white p-3 rounded-full shadow-lg hover:bg-deep-blue/90 transition-all z-50"
+          className="fixed bottom-6 right-6 bg-deep-blue text-white p-3 rounded-full shadow-xl hover:bg-deep-blue/90 transition-all z-50 hover:scale-110"
+          variant="default"
+          size="icon"
           aria-label="Scroll to top"
         >
           <ArrowUp size={24} />
-        </button>
+        </Button>
       )}
     </div>
   );

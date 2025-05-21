@@ -67,7 +67,7 @@ const Speaking = () => {
               </ul>
             </div>
             
-            <div className="flex flex-wrap gap-4 pt-2">
+            <div className="flex flex-wrap gap-4 pt-4">
               <Button 
                 onClick={() => scrollToSection('contact')}
                 className="bg-deep-blue hover:bg-deep-blue/90 text-white"
@@ -86,7 +86,7 @@ const Speaking = () => {
           </div>
           
           {/* Need a Trusted Technical Hand Section */}
-          <div className="space-y-6">
+          <div className="space-y-6 bg-gray-50 p-8 rounded-lg shadow-sm">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-2">Need a Trusted Technical Hand?</h2>
               <Separator className="w-16 h-1 bg-deep-blue mb-6" />
@@ -100,10 +100,10 @@ const Speaking = () => {
               If you're looking for a backend engineer, DevOps expert, cloud specialist, or data lead, I can point you toward vetted, experienced professionals I trust.
             </p>
             
-            <div className="pt-4">
+            <div className="pt-6">
               <Button 
                 onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
-                className="bg-deep-blue hover:bg-deep-blue/90 text-white"
+                className="bg-deep-blue hover:bg-deep-blue/90 text-white hover:scale-105 transition-transform"
               >
                 Connect on LinkedIn
               </Button>
