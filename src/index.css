@@ -10,33 +10,33 @@
 
 @layer base {
   :root {
-    --background: 240 10% 4%;
+    --background: 0 0% 13%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 4%;
+    --card: 0 0% 13%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 4%;
+    --popover: 0 0% 13%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 30 100% 44%;
+    --primary: 0 0% 20%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 35% 62%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 0 0% 60%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 240 3.7% 15.9%;
+    --accent: 0 0% 20%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 0% 30%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 30 100% 44%;
+    --border: 0 0% 25%;
+    --input: 0 0% 25%;
+    --ring: 0 0% 35%;
 
     --radius: 0.3rem;
   }
@@ -48,11 +48,11 @@
   }
 
   body {
-    @apply bg-charcoal text-beige font-body;
+    @apply bg-charcoal text-white font-body;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-normal leading-tight text-beige;
+    @apply font-sans font-normal leading-tight text-white;
   }
   
   h1 {
@@ -72,7 +72,7 @@
   }
   
   p {
-    @apply text-beige/80 leading-relaxed font-light;
+    @apply text-silver leading-relaxed font-light;
   }
   
   code, pre, .code {
@@ -88,11 +88,11 @@
   }
   
   .nav-item {
-    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-orange after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-silver after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 
   .link-underline {
-    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-orange after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
+    @apply relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-px after:bottom-0 after:left-0 after:bg-silver after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left;
   }
 }
 
@@ -112,12 +112,12 @@
 
 /* Gradient buttons */
 .btn-gradient {
-  @apply bg-gradient-to-r from-orange to-orange-light hover:from-orange-dark hover:to-orange transition-all duration-300;
+  @apply bg-gradient-to-r from-graphite to-charcoal hover:from-charcoal hover:to-black transition-all duration-300;
 }
 
 /* Animated borders */
 .animated-border {
-  @apply relative after:absolute after:inset-0 after:p-[1px] after:rounded after:bg-gradient-to-r after:from-orange after:via-gold after:to-orange after:content-[''] after:animate-gradient-shift after:opacity-30;
+  @apply relative after:absolute after:inset-0 after:p-[1px] after:rounded after:bg-gradient-to-r after:from-graphite after:via-silver after:to-graphite after:content-[''] after:animate-gradient-shift after:opacity-30;
 }
 
 /* Card hover effects */
@@ -127,12 +127,12 @@
 
 /* Elegant hover effect */
 .elegant-hover {
-  @apply transition-all duration-300 ease-in-out hover:shadow-[0_5px_15px_-10px_rgba(224,108,0,0.15)];
+  @apply transition-all duration-300 ease-in-out hover:shadow-[0_5px_15px_-10px_rgba(0,0,0,0.15)];
 }
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-orange to-orange-light bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-graphite to-silver bg-clip-text text-transparent;
 }
 
 /* Minimal border */
@@ -147,7 +147,7 @@
 
 /* Modern card */
 .modern-card {
-  @apply bg-beige border border-charcoal/10 hover:shadow-sm transition-shadow duration-300;
+  @apply bg-offwhite border border-charcoal/10 hover:shadow-sm transition-shadow duration-300;
 }
 
 /* Animation Helpers */

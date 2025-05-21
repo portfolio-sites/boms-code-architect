@@ -1,9 +1,9 @@
 
 /* Minimal App CSS with a focus on typography and subtle effects */
 :root {
-  --primary-color: #E06C00;
-  --bg-color: #1C1C1E;
-  --text-color: #F5F0EB;
+  --primary-color: #555555;
+  --bg-color: #222222;
+  --text-color: #F5F5F5;
 }
 
 #root {
@@ -33,7 +33,7 @@ body {
 
 /* Modern elements */
 .modern-accent {
-  background: linear-gradient(90deg, #E06C00, #BFAE80);
+  background: linear-gradient(90deg, #555555, #999999);
   background-size: 200% auto;
   animation: shimmer 5s infinite linear;
 }
@@ -48,7 +48,7 @@ body {
 }
 
 .subtle-border {
-  border: 1px solid rgba(224, 108, 0, 0.2);
+  border: 1px solid rgba(153, 153, 153, 0.2);
 }
 
 /* Modern typography */
@@ -77,7 +77,7 @@ section.alt-bg {
 }
 
 .btn-primary:hover {
-  background-color: #CC5F00;
+  background-color: #333333;
   transform: translateY(-1px);
 }
 
@@ -89,7 +89,7 @@ a {
 }
 
 a:hover {
-  color: #FF7C14;
+  color: #777777;
 }
 
 /* Card enhancements */

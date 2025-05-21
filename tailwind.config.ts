@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,15 +25,14 @@ export default {
 				body: ['"Inter"', 'sans-serif'],
 			},
 			colors: {
-				charcoal: '#1C1C1E', // Base background
-				orange: {
-					DEFAULT: '#E06C00', // CTA & accent
-					light: '#FF7C14',
-					dark: '#CC5F00',
-				},
-				beige: '#F5F0EB', // Background for text sections
-				graphite: '#4A4A4A', // Body text
-				gold: '#BFAE80', // Optional accent
+				// Monochromatic palette
+				black: '#000000', // Pure black for strong contrast
+				charcoal: '#222222', // Dark grey for backgrounds
+				graphite: '#555555', // Medium grey for text
+				silver: '#999999', // Light grey for secondary elements
+				lightgrey: '#CCCCCC', // Even lighter grey for borders, etc
+				offwhite: '#F5F5F5', // Off-white for backgrounds
+				white: '#FFFFFF', // Pure white
 				
 				// Keep system colors for components
 				border: 'hsl(var(--border))',
