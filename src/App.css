@@ -12,6 +12,17 @@
   padding: 0;
   text-align: left;
   overflow-x: hidden;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Subtle transitions */
@@ -22,9 +33,9 @@
 
 /* Modern elements */
 .modern-accent {
-  background: linear-gradient(90deg, #E06C00, #BFAE80, #E06C00);
+  background: linear-gradient(90deg, #E06C00, #BFAE80);
   background-size: 200% auto;
-  animation: shimmer 3s infinite linear;
+  animation: shimmer 5s infinite linear;
 }
 
 @keyframes shimmer {
@@ -37,12 +48,82 @@
 }
 
 .subtle-border {
-  border: 1px solid rgba(224, 108, 0, 0.1);
+  border: 1px solid rgba(224, 108, 0, 0.2);
 }
 
 /* Modern typography */
 .modern-heading {
   font-family: 'Space Grotesk', sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   letter-spacing: -0.02em;
+}
+
+/* Section styling */
+section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+section.alt-bg {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+/* Button styling enhancements */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #CC5F00;
+  transform: translateY(-1px);
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #FF7C14;
+}
+
+/* Card enhancements */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Add more spacing between sections */
+.section-spacer {
+  height: 6rem;
+}
+
+/* Badge customizations */
+.custom-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }
