@@ -72,7 +72,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => scrollToSection('contact')}
-              className="border-white text-white hover:bg-white/10 hover:text-white text-lg font-medium"
+              className="border-white text-black hover:bg-white/10 hover:text-white text-lg font-medium"
             >
               Get in Touch
             </Button>
