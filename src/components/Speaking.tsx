@@ -1,6 +1,7 @@
 
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const Speaking = () => {
   const scrollToSection = (id: string) => {
@@ -46,12 +47,42 @@ const Speaking = () => {
               </li>
             </ul>
             
-            <Button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-deep-blue hover:bg-deep-blue/90 text-white"
-            >
-              Reach out to book me
-            </Button>
+            <div className="space-y-4">
+              <p className="text-lg">
+                <strong>Past Speaking Engagements:</strong>
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
+                  <span>Girls in ICT Events (2015-2016) - Speaker for senior secondary girls interested in STEM</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
+                  <span>Charis Intelligence Webinar (2023) - Technical Leadership Talk</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-1.5 h-1.5 bg-deep-blue rounded-full mt-2 mr-2"></span>
+                  <span>Resplash Academy - Mentor for Women in Tech (2019-Present)</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div className="flex gap-4">
+              <Button 
+                onClick={() => scrollToSection('contact')}
+                className="bg-deep-blue hover:bg-deep-blue/90 text-white"
+              >
+                Reach out to book me
+              </Button>
+              
+              <Button 
+                variant="outline"
+                className="border-deep-blue text-deep-blue hover:bg-deep-blue/10"
+                onClick={() => window.open('https://charisintelligence.com.ng/team-members/', '_blank')}
+              >
+                View Board Position <ExternalLink className="ml-1 h-4 w-4" />
+              </Button>
+            </div>
           </div>
           
           {/* Need a Trusted Technical Hand Section */}
@@ -70,10 +101,10 @@ const Speaking = () => {
             </p>
             
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
               className="bg-deep-blue hover:bg-deep-blue/90 text-white"
             >
-              Reach out if you're hiring
+              Connect on LinkedIn
             </Button>
           </div>
         </div>

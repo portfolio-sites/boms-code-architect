@@ -31,8 +31,17 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Form submission logic - this would typically be an API call
+    // Here we'll simulate sending to the email address
     setTimeout(() => {
+      const formData = {
+        to: "Steffanie07@gmail.com",
+        subject: `Contact Form: ${formState.purpose}`,
+        ...formState
+      };
+      
+      console.log("Form submitted:", formData);
+      
       toast({
         title: "Message sent!",
         description: "Thank you for reaching out. I'll get back to you soon.",
@@ -144,7 +153,7 @@ const Contact = () => {
                   </div>
                   <h3 className="font-grotesk text-lg font-bold">Email</h3>
                 </div>
-                <p className="font-medium">hello@stephanieboms.com</p>
+                <p className="font-medium">Steffanie07@gmail.com</p>
               </div>
               
               <div className="p-6 bg-gray-50 rounded-lg">

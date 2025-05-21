@@ -54,8 +54,12 @@ const Navbar = () => {
             <a onClick={() => scrollToSection('expertise')} className="text-white nav-item cursor-pointer">What I Do</a>
             <a onClick={() => scrollToSection('projects')} className="text-white nav-item cursor-pointer">Projects</a>
             <a onClick={() => scrollToSection('speaking')} className="text-white nav-item cursor-pointer">Speaking</a>
+            <a onClick={() => scrollToSection('awards')} className="text-white nav-item cursor-pointer">Awards</a>
             <a onClick={() => scrollToSection('contact')} className="text-white nav-item cursor-pointer">Contact</a>
-            <Button onClick={() => scrollToSection('contact')} className="bg-white text-deep-blue hover:bg-white/90">
+            <Button 
+              onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
+              className="bg-white text-deep-blue hover:bg-white/90"
+            >
               Hire or Refer
             </Button>
           </nav>
@@ -70,8 +74,12 @@ const Navbar = () => {
             <a onClick={() => scrollToSection('expertise')} className="text-white py-2 px-4 cursor-pointer">What I Do</a>
             <a onClick={() => scrollToSection('projects')} className="text-white py-2 px-4 cursor-pointer">Projects</a>
             <a onClick={() => scrollToSection('speaking')} className="text-white py-2 px-4 cursor-pointer">Speaking</a>
+            <a onClick={() => scrollToSection('awards')} className="text-white py-2 px-4 cursor-pointer">Awards</a>
             <a onClick={() => scrollToSection('contact')} className="text-white py-2 px-4 cursor-pointer">Contact</a>
-            <Button onClick={() => scrollToSection('contact')} className="bg-white text-deep-blue hover:bg-white/90 w-full">
+            <Button 
+              onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
+              className="bg-white text-deep-blue hover:bg-white/90 w-full"
+            >
               Hire or Refer
             </Button>
           </div>
