@@ -30,11 +30,18 @@ const Navbar = () => {
     }
   };
 
+  // Determine background color based on scroll position
+  const navbarBg = isScrolled 
+    ? 'bg-charcoal/95 backdrop-blur-sm' 
+    : 'bg-transparent';
+
+  const textColor = 'text-beige';
+
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1D4ED8]/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${navbarBg}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between py-4">
-          <a href="#" className="text-white font-grotesk text-xl md:text-2xl font-bold">
+          <a href="#" className={`${textColor} font-sans text-xl md:text-2xl font-medium`}>
             Stephanie Boms
           </a>
           
@@ -43,22 +50,24 @@ const Navbar = () => {
               variant="ghost" 
               size="icon" 
               onClick={toggleMenu}
-              className="text-white"
+              className={textColor}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
-            <a onClick={() => scrollToSection('about')} className="text-white nav-item cursor-pointer">About</a>
-            <a onClick={() => scrollToSection('expertise')} className="text-white nav-item cursor-pointer">What I Do</a>
-            <a onClick={() => scrollToSection('projects')} className="text-white nav-item cursor-pointer">Projects</a>
-            <a onClick={() => scrollToSection('speaking')} className="text-white nav-item cursor-pointer">Speaking</a>
-            <a onClick={() => scrollToSection('awards')} className="text-white nav-item cursor-pointer">Awards</a>
-            <a onClick={() => scrollToSection('contact')} className="text-white nav-item cursor-pointer">Contact</a>
+            <a onClick={() => scrollToSection('about')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>About</a>
+            <a onClick={() => scrollToSection('expertise')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>What I Do</a>
+            <a onClick={() => scrollToSection('projects')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>Projects</a>
+            <a onClick={() => scrollToSection('speaking')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>Speaking</a>
+            <a onClick={() => scrollToSection('awards')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>Awards</a>
+            <a onClick={() => scrollToSection('contact')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>Contact</a>
             <Button 
               onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
-              className="bg-white text-deep-blue hover:bg-white/90"
+              className="bg-orange hover:bg-orange-dark text-white text-sm font-normal"
+              variant="default"
+              size="sm"
             >
               Hire or Refer
             </Button>
@@ -68,17 +77,19 @@ const Navbar = () => {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-[#1D4ED8]">
+        <div className="md:hidden bg-charcoal">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a onClick={() => scrollToSection('about')} className="text-white py-2 px-4 cursor-pointer">About</a>
-            <a onClick={() => scrollToSection('expertise')} className="text-white py-2 px-4 cursor-pointer">What I Do</a>
-            <a onClick={() => scrollToSection('projects')} className="text-white py-2 px-4 cursor-pointer">Projects</a>
-            <a onClick={() => scrollToSection('speaking')} className="text-white py-2 px-4 cursor-pointer">Speaking</a>
-            <a onClick={() => scrollToSection('awards')} className="text-white py-2 px-4 cursor-pointer">Awards</a>
-            <a onClick={() => scrollToSection('contact')} className="text-white py-2 px-4 cursor-pointer">Contact</a>
+            <a onClick={() => scrollToSection('about')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>About</a>
+            <a onClick={() => scrollToSection('expertise')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>What I Do</a>
+            <a onClick={() => scrollToSection('projects')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>Projects</a>
+            <a onClick={() => scrollToSection('speaking')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>Speaking</a>
+            <a onClick={() => scrollToSection('awards')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>Awards</a>
+            <a onClick={() => scrollToSection('contact')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>Contact</a>
             <Button 
               onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
-              className="bg-white text-deep-blue hover:bg-white/90 w-full"
+              className="bg-orange hover:bg-orange-dark text-white w-full text-sm font-normal"
+              variant="default"
+              size="sm"
             >
               Hire or Refer
             </Button>

@@ -1,3 +1,7 @@
+
+import { useEffect, useState } from "react";
+import { ArrowUp } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -9,9 +13,6 @@ import Speaking from "@/components/Speaking";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
-import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Index = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -62,7 +63,7 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden bg-[#F9FAFB]">
+    <div className="min-h-screen flex flex-col overflow-x-hidden bg-charcoal">
       <Navbar />
       <Hero />
       <About />
@@ -75,23 +76,26 @@ const Index = () => {
       <Contact />
       <Footer />
       
-      {showScrollButton && (
-        <Button 
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-[#2563EB] text-white p-3 rounded-full shadow-xl hover:bg-[#1D4ED8] transition-all z-50 hover:scale-110"
-          variant="default"
-          size="icon"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={24} />
-        </Button>
-      )}
+      {/* Scroll to top button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        {showScrollButton && (
+          <Button 
+            onClick={scrollToTop}
+            className="bg-orange hover:bg-orange-dark text-white p-3 rounded-full shadow-md transition-all hover:scale-105"
+            variant="default"
+            size="icon"
+            aria-label="Scroll to top"
+          >
+            <ArrowUp size={20} />
+          </Button>
+        )}
+      </div>
       
       <style>
         {`
-        @keyframes growWidth {
-          from { width: 0; }
-          to { width: 100%; }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         
         section {
@@ -100,15 +104,7 @@ const Index = () => {
         
         .animate-fade-in {
           opacity: 0;
-          transform: translateY(10px);
-          animation: fadeIn 0.5s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          animation: fadeIn 0.6s ease-out forwards;
         }
         `}
       </style>

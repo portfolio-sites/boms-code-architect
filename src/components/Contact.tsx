@@ -58,22 +58,22 @@ const Contact = () => {
   };
   
   return (
-    <section id="contact" className="py-16 md:py-20 bg-white">
+    <section id="contact" className="py-20 bg-beige">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Let's Connect</h2>
-            <Separator className="w-16 h-1 bg-[#2563EB] mx-auto mb-8" />
-            <p className="text-lg max-w-2xl mx-auto text-[#6B7280]">
-              Interested in working together, booking me for a session, or getting a technical referral? Use the form below or reach out directly.
+        <div className="max-w-3xl">
+          <div className="text-left mb-12">
+            <h2 className="text-2xl md:text-3xl font-normal mb-4 text-charcoal">Let's Connect</h2>
+            <Separator className="w-12 h-px bg-orange mx-0 mb-4" />
+            <p className="text-base max-w-xl text-graphite font-light">
+              Interested in working together or have a question? Use the form below or reach out directly.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1 text-[#1F2937]">
+                  <label htmlFor="name" className="block text-sm font-light mb-1 text-graphite">
                     Name
                   </label>
                   <Input
@@ -82,13 +82,13 @@ const Contact = () => {
                     value={formState.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1 text-[#1F2937]">
+                  <label htmlFor="email" className="block text-sm font-light mb-1 text-graphite">
                     Email
                   </label>
                   <Input
@@ -98,17 +98,17 @@ const Contact = () => {
                     value={formState.email}
                     onChange={handleChange}
                     placeholder="Your email address"
-                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="purpose" className="block text-sm font-medium mb-1 text-[#1F2937]">
+                  <label htmlFor="purpose" className="block text-sm font-light mb-1 text-graphite">
                     Purpose
                   </label>
                   <Select value={formState.purpose} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]">
+                    <SelectTrigger className="border-charcoal/20 bg-beige text-charcoal">
                       <SelectValue placeholder="Select purpose" />
                     </SelectTrigger>
                     <SelectContent>
@@ -122,7 +122,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1 text-[#1F2937]">
+                  <label htmlFor="message" className="block text-sm font-light mb-1 text-graphite">
                     Message
                   </label>
                   <Textarea
@@ -132,7 +132,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     rows={4}
-                    className="border-gray-300 focus:border-[#2563EB] focus:ring-[#2563EB]"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
@@ -140,44 +140,44 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white"
+                className="w-full bg-orange hover:bg-orange-dark text-white"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
             
-            <div className="space-y-6">
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-white" />
+            <div className="space-y-4">
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
+                    <Mail className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Email</h3>
+                  <h3 className="text-base font-normal text-charcoal">Email</h3>
                 </div>
-                <a href="mailto:Steffanie07@gmail.com" className="font-medium text-[#2563EB] hover:underline">
+                <a href="mailto:Steffanie07@gmail.com" className="font-light text-orange hover:underline">
                   Steffanie07@gmail.com
                 </a>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-white" />
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
+                    <MapPin className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">Current Location</h3>
+                  <h3 className="text-base font-normal text-charcoal">Current Location</h3>
                 </div>
-                <p className="font-medium text-[#6B7280]">Swieqi, Malta</p>
+                <p className="font-light text-graphite">Swieqi, Malta</p>
               </div>
               
-              <div className="p-6 bg-gray-50 rounded-lg border border-gray-100 shadow-sm">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-[#2563EB] rounded-full flex items-center justify-center">
-                    <Linkedin className="h-5 w-5 text-white" />
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
+                <div className="flex items-center space-x-3 mb-3">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
+                    <Linkedin className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">LinkedIn</h3>
+                  <h3 className="text-base font-normal text-charcoal">LinkedIn</h3>
                 </div>
-                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2563EB] hover:underline">
+                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-light text-orange hover:underline">
                   Connect
                 </a>
               </div>
