@@ -55,10 +55,15 @@ const Hero = () => {
           </h1>
           <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/90 mb-4">Software Developer & Team Lead</span>
           <h2 className="text-[#A3B1C6] text-lg md:text-xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
-            Leading backend teams to build the reliable systems real-world operations depend on.
+            Leading teams to build reliable systems
           </h2>
-          <p className="text-[#D6DDEA] text-base md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: "0.2s"}}>
+          {/* Mobile-optimized description */}
+          <p className="text-[#D6DDEA] text-sm md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in hidden sm:block" style={{animationDelay: "0.2s"}}>
             Based in Swieqi, Malta, Stephanie brings over 10 years of experience crafting secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
+          </p>
+          {/* Shorter version for mobile */}
+          <p className="text-[#D6DDEA] text-sm mb-6 max-w-2xl mx-auto animate-fade-in sm:hidden" style={{animationDelay: "0.2s"}}>
+            10+ years experience in enterprise software development across healthcare, fintech, gaming, and government sectors.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
@@ -72,7 +77,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => scrollToSection('contact')}
-              className="border-white text-black hover:bg-white/10 hover:text-white text-base md:text-lg font-medium"
+              className="border-white text-white hover:bg-white/10 text-base md:text-lg font-medium"
             >
               Get in Touch
             </Button>
