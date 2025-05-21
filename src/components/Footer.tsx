@@ -20,7 +20,7 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin size={18} />
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">Connect</span>
               </a>
               <a 
                 href="https://github.com/steffanie07" 

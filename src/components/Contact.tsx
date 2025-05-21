@@ -178,7 +178,7 @@ const Contact = () => {
                   <h3 className="font-grotesk text-lg font-bold text-[#1F2937]">LinkedIn</h3>
                 </div>
                 <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-medium text-[#2563EB] hover:underline">
-                  LinkedIn
+                  Connect
                 </a>
               </div>
             </div>
