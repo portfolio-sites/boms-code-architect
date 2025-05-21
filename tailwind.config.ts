@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -19,22 +20,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Space Grotesk"', '"Montserrat"', 'sans-serif'],
-				mono: ['"IBM Plex Mono"', 'monospace'],
-				body: ['"Inter"', 'sans-serif'],
+				grotesk: ['"Space Grotesk"', 'sans-serif'],
+				inter: ['"Inter"', 'sans-serif'],
+				mono: ['"JetBrains Mono"', 'monospace'],
 			},
 			colors: {
-				charcoal: '#1C1C1E', // Base background
-				orange: {
-					DEFAULT: '#E06C00', // CTA & accent
-					light: '#FF7C14',
-					dark: '#CC5F00',
-				},
-				beige: '#F5F0EB', // Background for text sections
-				graphite: '#4A4A4A', // Body text
-				gold: '#BFAE80', // Optional accent
-				
-				// Keep system colors for components
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
@@ -67,30 +57,85 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
-				}
+				},
+				sidebar: {
+					DEFAULT: 'hsl(var(--sidebar-background))',
+					foreground: 'hsl(var(--sidebar-foreground))',
+					primary: 'hsl(var(--sidebar-primary))',
+					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
+					accent: 'hsl(var(--sidebar-accent))',
+					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
+					border: 'hsl(var(--sidebar-border))',
+					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'deep-blue': '#1A1A2E',
+				'royal-blue': '#3A5CC9',
+				'vivid-blue': '#2563EB',
+				'soft-blue': '#BED0F7',
+				'midnight': '#0A1F44', 
+				'slate-gray': '#64748B',
+				'light-gray': '#F1F5F9',
+				'warm-gray': '#E2E8F0',
+				'soft-yellow': '#FEF7CD',
+				'soft-green': '#F2FCE2',
+				'soft-purple': '#E5DEFF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
-				md: 'calc(var(--radius) - 0.1rem)',
-				sm: 'calc(var(--radius) - 0.2rem)'
+				md: 'calc(var(--radius) - 2px)',
+				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				},
 				'fade-in': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(8px)'
+						transform: 'translateY(10px)'
 					},
 					'100%': {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
 				},
-				'subtle-float': {
+				'slide-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'float': {
 					'0%, 100%': {
 						transform: 'translateY(0)'
 					},
 					'50%': {
-						transform: 'translateY(-3px)'
+						transform: 'translateY(-10px)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 5px rgba(37, 99, 235, 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 20px rgba(37, 99, 235, 0.6)'
 					}
 				},
 				'gradient-shift': {
@@ -103,12 +148,32 @@ export default {
 					'100%': {
 						backgroundPosition: '0% 50%'
 					}
-				}
+				},
+				'pulse-soft': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
+				},
 			},
 			animation: {
-				'fade-in': 'fade-in 0.6s ease-out forwards',
-				'subtle-float': 'subtle-float 3s ease-in-out infinite',
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
+				'slide-in': 'slide-in 0.3s ease-out forwards',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 8s ease infinite',
+				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+			},
+			backgroundImage: {
+				'hero-pattern': "url('/lovable-uploads/hero-pattern.svg')",
+				'dots-pattern': "url('/lovable-uploads/dots-pattern.svg')",
+				'wave-pattern': "url('/lovable-uploads/wave-pattern.svg')",
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
 			},
 		}
 	},
