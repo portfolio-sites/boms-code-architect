@@ -88,9 +88,8 @@ const Index = () => {
         </Button>
       )}
       
-      {/* Add some custom styles for transitions */}
-      <style global>
-        {`
+      {/* Add custom styles for transitions - use style jsx instead of global attribute */}
+      <style jsx>{`
         @keyframes growWidth {
           from { width: 0; }
           to { width: 100%; }
@@ -112,8 +111,7 @@ const Index = () => {
             transform: translateY(0);
           }
         }
-        `}
-      </style>
+      `}</style>
     </div>
   );
 };
