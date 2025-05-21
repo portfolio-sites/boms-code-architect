@@ -1,15 +1,9 @@
 
 /* Minimal App CSS with a focus on typography and subtle effects */
 :root {
-  --primary-color: #10B981;
-  --bg-color: #FFFFFF;
-  --text-color: #1F2937;
-}
-
-.dark {
-  --primary-color: #10B981;
-  --bg-color: #121212;
-  --text-color: #F3F4F6;
+  --primary-color: #E06C00;
+  --bg-color: #1C1C1E;
+  --text-color: #F5F0EB;
 }
 
 #root {
@@ -28,7 +22,7 @@
 
 /* Modern elements */
 .modern-accent {
-  background: linear-gradient(90deg, #10B981, #A855F7, #10B981);
+  background: linear-gradient(90deg, #E06C00, #BFAE80, #E06C00);
   background-size: 200% auto;
   animation: shimmer 3s infinite linear;
 }
@@ -43,16 +37,12 @@
 }
 
 .subtle-border {
-  border: 1px solid rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(224, 108, 0, 0.1);
 }
 
 /* Modern typography */
 .modern-heading {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-weight: 300;
   letter-spacing: -0.02em;
-}
-
-.dark .modern-heading {
-  color: #F3F4F6;
 }

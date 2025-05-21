@@ -2,12 +2,10 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { useTheme } from "./theme-provider";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { theme } = useTheme();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   
@@ -32,16 +30,12 @@ const Navbar = () => {
     }
   };
 
-  // Determine background color based on scroll position and theme
+  // Determine background color based on scroll position
   const navbarBg = isScrolled 
-    ? theme === 'dark' 
-      ? 'bg-gray-900/95 backdrop-blur-sm' 
-      : 'bg-white/95 backdrop-blur-sm shadow-sm' 
+    ? 'bg-charcoal/95 backdrop-blur-sm' 
     : 'bg-transparent';
 
-  const textColor = isScrolled || theme === 'dark' 
-    ? 'text-gray-100' 
-    : 'text-gray-800';
+  const textColor = 'text-beige';
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${navbarBg}`}>
@@ -71,7 +65,7 @@ const Navbar = () => {
             <a onClick={() => scrollToSection('contact')} className={`${textColor} nav-item cursor-pointer text-sm font-normal`}>Contact</a>
             <Button 
               onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
-              className="bg-emerald-500 hover:bg-emerald-600 text-white text-sm font-normal"
+              className="bg-orange hover:bg-orange-dark text-white text-sm font-normal"
               variant="default"
               size="sm"
             >
@@ -83,7 +77,7 @@ const Navbar = () => {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className={`md:hidden ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
+        <div className="md:hidden bg-charcoal">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a onClick={() => scrollToSection('about')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>About</a>
             <a onClick={() => scrollToSection('expertise')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>What I Do</a>
@@ -93,7 +87,7 @@ const Navbar = () => {
             <a onClick={() => scrollToSection('contact')} className={`${textColor} py-2 px-4 cursor-pointer text-sm`}>Contact</a>
             <Button 
               onClick={() => window.open('https://www.linkedin.com/in/stephanie-boms-07', '_blank')}
-              className="bg-emerald-500 hover:bg-emerald-600 text-white w-full text-sm font-normal"
+              className="bg-orange hover:bg-orange-dark text-white w-full text-sm font-normal"
               variant="default"
               size="sm"
             >

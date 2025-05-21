@@ -7,10 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, MapPin, Linkedin } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
-import { useTheme } from "./theme-provider";
 
 const Contact = () => {
-  const { resolvedTheme } = useTheme();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -59,16 +57,14 @@ const Contact = () => {
     }, 1500);
   };
   
-  const bgColor = resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white';
-  
   return (
-    <section id="contact" className={`py-20 ${bgColor}`}>
+    <section id="contact" className="py-20 bg-beige">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-light mb-4">Let's Connect</h2>
-            <Separator className="w-12 h-px bg-emerald-400 mx-auto mb-4" />
-            <p className="text-base max-w-xl mx-auto text-gray-600 dark:text-gray-400 font-light">
+        <div className="max-w-3xl">
+          <div className="text-left mb-12">
+            <h2 className="text-2xl md:text-3xl font-normal mb-4 text-charcoal">Let's Connect</h2>
+            <Separator className="w-12 h-px bg-orange mx-0 mb-4" />
+            <p className="text-base max-w-xl text-graphite font-light">
               Interested in working together or have a question? Use the form below or reach out directly.
             </p>
           </div>
@@ -77,7 +73,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-light mb-1 text-gray-700 dark:text-gray-300">
+                  <label htmlFor="name" className="block text-sm font-light mb-1 text-graphite">
                     Name
                   </label>
                   <Input
@@ -86,13 +82,13 @@ const Contact = () => {
                     value={formState.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="border-gray-200 dark:border-gray-800"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-light mb-1 text-gray-700 dark:text-gray-300">
+                  <label htmlFor="email" className="block text-sm font-light mb-1 text-graphite">
                     Email
                   </label>
                   <Input
@@ -102,17 +98,17 @@ const Contact = () => {
                     value={formState.email}
                     onChange={handleChange}
                     placeholder="Your email address"
-                    className="border-gray-200 dark:border-gray-800"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="purpose" className="block text-sm font-light mb-1 text-gray-700 dark:text-gray-300">
+                  <label htmlFor="purpose" className="block text-sm font-light mb-1 text-graphite">
                     Purpose
                   </label>
                   <Select value={formState.purpose} onValueChange={handleSelectChange}>
-                    <SelectTrigger className="border-gray-200 dark:border-gray-800">
+                    <SelectTrigger className="border-charcoal/20 bg-beige text-charcoal">
                       <SelectValue placeholder="Select purpose" />
                     </SelectTrigger>
                     <SelectContent>
@@ -126,7 +122,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-light mb-1 text-gray-700 dark:text-gray-300">
+                  <label htmlFor="message" className="block text-sm font-light mb-1 text-graphite">
                     Message
                   </label>
                   <Textarea
@@ -136,7 +132,7 @@ const Contact = () => {
                     onChange={handleChange}
                     placeholder="How can I help you?"
                     rows={4}
-                    className="border-gray-200 dark:border-gray-800"
+                    className="border-charcoal/20 bg-beige text-charcoal"
                     required
                   />
                 </div>
@@ -144,7 +140,7 @@ const Contact = () => {
               
               <Button 
                 type="submit" 
-                className="w-full bg-emerald-500 hover:bg-emerald-600 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500"
+                className="w-full bg-orange hover:bg-orange-dark text-white"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
@@ -152,36 +148,36 @@ const Contact = () => {
             </form>
             
             <div className="space-y-4">
-              <div className={`p-5 rounded border border-gray-100 dark:border-gray-800 ${resolvedTheme === 'dark' ? 'bg-gray-800/50' : 'bg-gray-50/50'}`}>
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 bg-emerald-500 rounded flex items-center justify-center">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
                     <Mail className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-normal text-gray-800 dark:text-gray-200">Email</h3>
+                  <h3 className="text-base font-normal text-charcoal">Email</h3>
                 </div>
-                <a href="mailto:Steffanie07@gmail.com" className="font-light text-emerald-600 hover:underline dark:text-emerald-400">
+                <a href="mailto:Steffanie07@gmail.com" className="font-light text-orange hover:underline">
                   Steffanie07@gmail.com
                 </a>
               </div>
               
-              <div className={`p-5 rounded border border-gray-100 dark:border-gray-800 ${resolvedTheme === 'dark' ? 'bg-gray-800/50' : 'bg-gray-50/50'}`}>
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 bg-emerald-500 rounded flex items-center justify-center">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
                     <MapPin className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-normal text-gray-800 dark:text-gray-200">Current Location</h3>
+                  <h3 className="text-base font-normal text-charcoal">Current Location</h3>
                 </div>
-                <p className="font-light text-gray-600 dark:text-gray-400">Swieqi, Malta</p>
+                <p className="font-light text-graphite">Swieqi, Malta</p>
               </div>
               
-              <div className={`p-5 rounded border border-gray-100 dark:border-gray-800 ${resolvedTheme === 'dark' ? 'bg-gray-800/50' : 'bg-gray-50/50'}`}>
+              <div className="p-5 rounded border border-charcoal/10 bg-beige/50">
                 <div className="flex items-center space-x-3 mb-3">
-                  <div className="w-8 h-8 bg-emerald-500 rounded flex items-center justify-center">
+                  <div className="w-8 h-8 bg-orange rounded flex items-center justify-center">
                     <Linkedin className="h-4 w-4 text-white" />
                   </div>
-                  <h3 className="text-base font-normal text-gray-800 dark:text-gray-200">LinkedIn</h3>
+                  <h3 className="text-base font-normal text-charcoal">LinkedIn</h3>
                 </div>
-                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-light text-emerald-600 hover:underline dark:text-emerald-400">
+                <a href="https://www.linkedin.com/in/stephanie-boms-07" target="_blank" rel="noopener noreferrer" className="font-light text-orange hover:underline">
                   Connect
                 </a>
               </div>

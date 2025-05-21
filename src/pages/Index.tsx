@@ -13,13 +13,10 @@ import Speaking from "@/components/Speaking";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
-import ThemeToggle from "@/components/ThemeToggle";
-import { useTheme } from "@/components/theme-provider";
 
 const Index = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
-  const { theme, resolvedTheme } = useTheme();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -66,7 +63,7 @@ const Index = () => {
   };
   
   return (
-    <div className={`min-h-screen flex flex-col overflow-x-hidden ${resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
+    <div className="min-h-screen flex flex-col overflow-x-hidden bg-charcoal">
       <Navbar />
       <Hero />
       <About />
@@ -79,14 +76,12 @@ const Index = () => {
       <Contact />
       <Footer />
       
-      {/* Theme toggle and scroll to top buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
-        <ThemeToggle />
-        
+      {/* Scroll to top button */}
+      <div className="fixed bottom-6 right-6 z-50">
         {showScrollButton && (
           <Button 
             onClick={scrollToTop}
-            className="bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white p-3 rounded-full shadow-md transition-all hover:scale-105"
+            className="bg-orange hover:bg-orange-dark text-white p-3 rounded-full shadow-md transition-all hover:scale-105"
             variant="default"
             size="icon"
             aria-label="Scroll to top"

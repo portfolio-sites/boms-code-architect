@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,10 +19,22 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Montserrat"', 'sans-serif'],
-				mono: ['"JetBrains Mono"', 'monospace'],
+				sans: ['"Space Grotesk"', '"Montserrat"', 'sans-serif'],
+				mono: ['"IBM Plex Mono"', 'monospace'],
+				body: ['"Inter"', 'sans-serif'],
 			},
 			colors: {
+				charcoal: '#1C1C1E', // Base background
+				orange: {
+					DEFAULT: '#E06C00', // CTA & accent
+					light: '#FF7C14',
+					dark: '#CC5F00',
+				},
+				beige: '#F5F0EB', // Background for text sections
+				graphite: '#4A4A4A', // Body text
+				gold: '#BFAE80', // Optional accent
+				
+				// Keep system colors for components
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
