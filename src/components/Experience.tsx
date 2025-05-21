@@ -113,17 +113,17 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-16 md:py-20 bg-white">
+    <section id="experience" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="max-w-4xl mx-auto mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Companies I've Worked With</h2>
-          <Separator className="w-16 h-1 bg-deep-blue mb-6" />
-          <p className="text-lg text-[#6B7280]">
+        <div className="max-w-4xl mx-auto mb-8 md:mb-10 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-[#1F2937]">Companies I've Worked With</h2>
+          <Separator className="w-16 h-1 bg-deep-blue mb-4 md:mb-6 mx-auto" />
+          <p className="text-base md:text-lg text-[#6B7280] mx-auto">
             Building enterprise systems across government, fintech, healthcare, and gaming sectors.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 md:gap-8">
           {/* Timeline Navigation - Desktop */}
           <div className="lg:col-span-1 hidden lg:block">
             <div className="sticky top-24 space-y-1 pr-4">
@@ -154,13 +154,13 @@ const Experience = () => {
           </div>
           
           {/* Timeline Navigation - Mobile */}
-          <div className="lg:hidden mb-6 overflow-x-auto">
-            <div className="flex space-x-2 pb-2">
+          <div className="lg:hidden mb-6 overflow-x-auto -mx-4 px-4">
+            <div className="flex space-x-2 pb-2 snap-x snap-mandatory scroll-px-4 overflow-x-scroll">
               {experiences.map((exp, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveExperience(index)}
-                  className={`whitespace-nowrap px-4 py-2 rounded-full text-sm ${
+                  className={`snap-start whitespace-nowrap px-4 py-2 rounded-full text-sm flex-shrink-0 ${
                     activeExperience === index 
                       ? 'bg-[#2563EB] text-white' 
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -174,26 +174,26 @@ const Experience = () => {
           
           {/* Experience Details */}
           <div className="lg:col-span-3">
-            <Card className="p-6 md:p-8 shadow-lg border-0 animate-fade-in">
-              <div className="flex flex-wrap items-start justify-between gap-4 mb-6 pb-4 border-b">
-                <div className="flex items-center gap-4">
+            <Card className="p-4 md:p-6 lg:p-8 shadow-lg border-0 animate-fade-in">
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-4 pb-4 border-b">
+                <div className="flex items-center gap-3 md:gap-4">
                   {renderLogoPlaceholder(experiences[activeExperience].company)}
                   <div>
-                    <h3 className="text-2xl font-bold text-[#1F2937]">{experiences[activeExperience].company}</h3>
-                    <p className="text-[#6B7280]">{experiences[activeExperience].location}</p>
+                    <h3 className="text-xl md:text-2xl font-bold text-[#1F2937]">{experiences[activeExperience].company}</h3>
+                    <p className="text-sm md:text-base text-[#6B7280]">{experiences[activeExperience].location}</p>
                   </div>
                 </div>
-                <div className="text-right">
-                  <p className="font-medium text-[#2563EB]">{experiences[activeExperience].role}</p>
-                  <p className="text-[#6B7280]">{experiences[activeExperience].period}</p>
+                <div className="text-right mt-2 sm:mt-0">
+                  <p className="font-medium text-sm md:text-base text-[#2563EB]">{experiences[activeExperience].role}</p>
+                  <p className="text-xs md:text-sm text-[#6B7280]">{experiences[activeExperience].period}</p>
                 </div>
               </div>
               
               <div className="prose max-w-none">
-                <p className="text-lg text-[#1F2937] mb-6">
+                <p className="text-base md:text-lg text-[#1F2937] mb-4 md:mb-6">
                   {experiences[activeExperience].description}
                 </p>
-                <div className="flex flex-wrap gap-2 mt-4">
+                <div className="flex flex-wrap gap-2 mt-3">
                   {experiences[activeExperience].skills.map((skill, index) => (
                     <Badge key={index} variant={
                       index % 5 === 0 ? "blue" : 
@@ -210,24 +210,24 @@ const Experience = () => {
           </div>
         </div>
         
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-6">Featured Companies</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+        <div className="mt-12 md:mt-16">
+          <h3 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6">Featured Companies</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
             {companyLogos.map((company, index) => (
-              <div key={index} className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center h-full">
+              <div key={index} className="bg-white p-3 md:p-4 rounded-lg shadow-md flex flex-col items-center justify-center h-full hover:shadow-lg transition-shadow duration-200">
                 {company.logo ? (
                   <img 
                     src={company.logo} 
                     alt={`${company.name} logo`} 
-                    className="max-w-full h-16 object-contain mb-2"
+                    className="max-w-full h-12 md:h-16 object-contain mb-2"
                   />
                 ) : (
-                  <div className={`h-16 w-16 rounded-full bg-gradient-to-br ${company.color} flex items-center justify-center text-white text-xl font-bold mb-2`}>
+                  <div className={`h-12 md:h-16 w-12 md:w-16 rounded-full bg-gradient-to-br ${company.color} flex items-center justify-center text-white text-lg md:text-xl font-bold mb-2`}>
                     {company.name.split(' ').map(word => word[0]).join('').slice(0, 2).toUpperCase()}
                   </div>
                 )}
-                <p className="font-medium text-center text-sm mt-2">{company.name}</p>
-                <p className="text-xs text-gray-500 text-center">{company.description}</p>
+                <p className="font-medium text-center text-xs md:text-sm mt-1 md:mt-2">{company.name}</p>
+                <p className="text-xs text-gray-500 text-center hidden sm:block">{company.description}</p>
               </div>
             ))}
           </div>

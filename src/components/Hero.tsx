@@ -43,28 +43,28 @@ const Hero = () => {
         </div>
       </div>
       
-      <div className="container mx-auto px-4 md:px-8 relative z-10 py-20">
-        <div className="max-w-3xl mx-auto md:mx-0">
-          <div className="mb-3 text-[#A3B1C6] text-xl">
+      <div className="container mx-auto px-4 md:px-8 relative z-10 py-10 md:py-20">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="mb-3 text-[#A3B1C6] text-lg md:text-xl">
             <span className="font-mono animate-pulse inline-block">&lt;</span>
             <span className="font-mono animate-pulse inline-block">{techStack[currentTechIndex]}</span>
             <span className="font-mono animate-pulse inline-block">/&gt;</span>
           </div>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 animate-fade-in">
-            Stephanie Boms<br />
-            <span className="text-3xl md:text-4xl lg:text-5xl text-white/90">Software Developer & Team Lead</span>
+          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 animate-fade-in">
+            Stephanie Boms
           </h1>
-          <h2 className="text-[#A3B1C6] text-xl md:text-2xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/90 mb-4">Software Developer & Team Lead</span>
+          <h2 className="text-[#A3B1C6] text-lg md:text-xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
             Leading backend teams to build the reliable systems real-world operations depend on.
           </h2>
-          <p className="text-[#D6DDEA] text-lg md:text-xl mb-8 max-w-2xl animate-fade-in" style={{animationDelay: "0.2s"}}>
+          <p className="text-[#D6DDEA] text-base md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in" style={{animationDelay: "0.2s"}}>
             Based in Swieqi, Malta, Stephanie brings over 10 years of experience crafting secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
+          <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
               size="lg" 
               onClick={() => scrollToSection('projects')}
-              className="bg-[#2563EB] text-white hover:bg-[#1D4ED8] text-lg font-medium hover:scale-105 transition-transform px-9 py-7"
+              className="bg-[#2563EB] text-white hover:bg-[#1D4ED8] text-base md:text-lg font-medium hover:scale-105 transition-transform px-6 md:px-9 py-5 md:py-7"
             >
               Explore My Projects
             </Button>
@@ -72,7 +72,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => scrollToSection('contact')}
-              className="border-white text-black hover:bg-white/10 hover:text-white text-lg font-medium"
+              className="border-white text-black hover:bg-white/10 hover:text-white text-base md:text-lg font-medium"
             >
               Get in Touch
             </Button>
