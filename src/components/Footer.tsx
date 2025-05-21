@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Column 1 - Logo and social links */}
           <div>
             <h3 className="text-xl font-grotesk font-bold mb-4">Stephanie Boms</h3>
-            <p className="text-gray-600 mb-4">Backend systems engineer & technical advisor</p>
+            <p className="text-gray-600 mb-4 font-normal">Backend systems engineer & technical advisor</p>
             <div className="flex space-x-4">
               <a 
                 href="https://www.linkedin.com/in/stephanie-boms-07" 
@@ -50,19 +50,19 @@ const Footer = () => {
             <h3 className="text-lg font-grotesk font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-600 hover:text-deep-blue transition-colors">About</a>
+                <a href="#about" className="text-gray-600 hover:text-deep-blue transition-colors font-normal">About</a>
               </li>
               <li>
-                <a href="#expertise" className="text-gray-600 hover:text-deep-blue transition-colors">Services</a>
+                <a href="#expertise" className="text-gray-600 hover:text-deep-blue transition-colors font-normal">Services</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-600 hover:text-deep-blue transition-colors">Projects</a>
+                <a href="#projects" className="text-gray-600 hover:text-deep-blue transition-colors font-normal">Projects</a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 hover:text-deep-blue transition-colors">Contact</a>
+                <a href="#contact" className="text-gray-600 hover:text-deep-blue transition-colors font-normal">Contact</a>
               </li>
               <li>
-                <a href="#awards" className="text-gray-600 hover:text-deep-blue transition-colors">Awards</a>
+                <a href="#awards" className="text-gray-600 hover:text-deep-blue transition-colors font-normal">Recognition</a>
               </li>
             </ul>
           </div>
@@ -71,9 +71,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-grotesk font-bold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li className="text-gray-600">Swieqi, Malta</li>
-              <li className="text-gray-600">(+356) 999-75-222</li>
-              <li className="text-gray-600">Steffanie07@gmail.com</li>
+              <li className="text-gray-600 font-normal">Swieqi, Malta</li>
+              <li className="text-gray-600 font-normal">(+356) 999-75-222</li>
+              <li className="text-gray-600 font-normal">Steffanie07@gmail.com</li>
             </ul>
           </div>
         </div>
@@ -81,8 +81,8 @@ const Footer = () => {
         <Separator className="my-8" />
         
         <div className="text-center text-gray-600 text-sm">
-          <p className="mb-2">© Copyright Creit Technologies Limited. All Rights Reserved.</p>
-          <p>
+          <p className="mb-2 font-normal">© Copyright Creit Technologies Limited. All Rights Reserved.</p>
+          <p className="font-normal">
             Designed by{" "}
             <a 
               href="https://www.instagram.com/missjones_tech?igsh=aHYzcHRzb2w5Ymdr&utm_source=qr" 
@@ -104,17 +104,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      
-      {/* Scroll to top button */}
-      <button 
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 w-12 h-12 bg-deep-blue text-white rounded-full shadow-lg flex items-center justify-center hover:bg-deep-blue/90 transition-all transform hover:scale-110 focus:outline-none"
-        aria-label="Scroll to top"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
     </footer>
   );
 };

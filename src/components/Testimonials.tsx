@@ -2,6 +2,8 @@
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Testimonials = () => {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -32,6 +34,14 @@ const Testimonials = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const navigateTestimonial = (direction: 'prev' | 'next') => {
+    if (direction === 'prev') {
+      setActiveTestimonial(prev => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    } else {
+      setActiveTestimonial(prev => (prev + 1) % testimonials.length);
+    }
+  };
+
   return (
     <section id="testimonials" className="py-16 md:py-24 bg-deep-blue text-white">
       <div className="container mx-auto px-4 md:px-8">
@@ -41,7 +51,7 @@ const Testimonials = () => {
           <p className="text-white/80">Feedback from professionals I've worked with throughout my career</p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto relative">
           {/* Active testimonial with animation */}
           <Card className="bg-white/10 border-0 mb-8 animate-fade-in">
             <CardContent className="pt-8 pb-4">
@@ -67,6 +77,28 @@ const Testimonials = () => {
               </div>
             </CardFooter>
           </Card>
+          
+          {/* Navigation buttons */}
+          <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 flex justify-between pointer-events-none">
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={() => navigateTestimonial('prev')}
+              className="bg-white/10 text-white rounded-full pointer-events-auto hover:bg-white/20"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={20} />
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={() => navigateTestimonial('next')}
+              className="bg-white/10 text-white rounded-full pointer-events-auto hover:bg-white/20"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={20} />
+            </Button>
+          </div>
           
           {/* Testimonial indicator dots */}
           <div className="flex justify-center gap-2">

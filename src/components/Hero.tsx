@@ -32,10 +32,10 @@ const Hero = () => {
             {techStack[currentTechIndex]}
           </div>
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fade-in">
-            Engineering Systems<br /> That Scale and Last.
+            Building Scalable<br /> Enterprise Systems
           </h1>
           <p className="text-white/80 text-xl md:text-2xl mb-8 max-w-2xl animate-fade-in" style={{animationDelay: "0.2s"}}>
-            10+ years building enterprise systems across government, fintech & gaming | Technical advisor to startups & organizations across 8+ countries.
+            Senior backend engineer with 10+ years of experience architecting robust solutions for government, fintech & gaming sectors across 8+ countries.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
