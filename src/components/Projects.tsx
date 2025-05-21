@@ -5,7 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter, DialogClose } from "@/components/ui/dialog";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ArrowUp } from "lucide-react";
+import { useEffect } from "react";
 
 interface Project {
   id: number;
@@ -21,6 +22,18 @@ interface Project {
   liveLink?: string;
   screenshots?: string[];
 }
+
+// Define badge color mapping to avoid template literal usage in className
+const getBadgeColorClasses = (color: string) => {
+  const colorMap: Record<string, string> = {
+    blue: "bg-blue-100 text-blue-800 hover:bg-blue-100",
+    green: "bg-green-100 text-green-800 hover:bg-green-100",
+    purple: "bg-purple-100 text-purple-800 hover:bg-purple-100",
+    amber: "bg-amber-100 text-amber-800 hover:bg-amber-100",
+    red: "bg-red-100 text-red-800 hover:bg-red-100"
+  };
+  return colorMap[color] || "bg-gray-100 text-gray-800 hover:bg-gray-100";
+};
 
 const projects: Project[] = [
   {
@@ -76,6 +89,27 @@ const projects: Project[] = [
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-gray-50">
@@ -91,7 +125,7 @@ const Projects = () => {
               <DialogTrigger asChild>
                 <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                   <CardHeader>
-                    <Badge className={`mb-2 bg-${project.badgeColor}-100 text-${project.badgeColor}-800 hover:bg-${project.badgeColor}-100 w-fit`}>
+                    <Badge className={`mb-2 ${getBadgeColorClasses(project.badgeColor)} w-fit`}>
                       {project.category}
                     </Badge>
                     <CardTitle className="text-2xl font-bold">{project.title}</CardTitle>
@@ -112,7 +146,7 @@ const Projects = () => {
               
               <DialogContent className="max-w-3xl">
                 <DialogHeader>
-                  <Badge className={`mb-2 bg-${project.badgeColor}-100 text-${project.badgeColor}-800 hover:bg-${project.badgeColor}-100 w-fit`}>
+                  <Badge className={`mb-2 ${getBadgeColorClasses(project.badgeColor)} w-fit`}>
                     {project.category}
                   </Badge>
                   <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
@@ -164,6 +198,17 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      {showScrollToTop && (
+        <Button
+          variant="secondary"
+          size="icon"
+          className="fixed bottom-6 right-6 rounded-full shadow-md bg-deep-blue text-white hover:bg-deep-blue/90 z-40"
+          onClick={scrollToTop}
+        >
+          <ArrowUp size={20} />
+        </Button>
+      )}
     </section>
   );
 };
