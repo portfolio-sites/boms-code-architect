@@ -4,7 +4,7 @@ import { Github, Linkedin, ExternalLink, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-deep-blue text-white py-12 relative">
+    <footer className="bg-gradient-to-b from-[#0A1F44] to-[#151934] text-white py-12 relative">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 - Logo and social links */}

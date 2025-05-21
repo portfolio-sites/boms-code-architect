@@ -24,10 +24,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="hero" className="bg-[#0A1F44] min-h-screen flex items-center relative overflow-hidden">
+    <section id="hero" className="bg-gradient-to-b from-[#1D4ED8] to-[#0A1F44] min-h-screen flex items-center relative overflow-hidden">
       {/* Dynamic background pattern */}
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover bg-no-repeat opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44] via-[#0A1F44] to-[#0A1F44]/90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1D4ED8]/90 via-[#0A1F44] to-[#0A1F44]/90"></div>
       
       {/* Animated grid lines - hide on mobile */}
       <div className="absolute inset-0 overflow-hidden opacity-20 hidden sm:block">
@@ -64,7 +64,7 @@ const Hero = () => {
           
           {/* Mobile-optimized description - only show on larger screens */}
           <p className="text-[#D6DDEA] text-sm md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in hidden sm:block" style={{animationDelay: "0.2s"}}>
-            Based in Swieqi, Malta, Stephanie brings over 10 years of experience crafting secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
+            Based in Swieqi, Malta, Stephanie brings over 10 years of experience developing secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
           </p>
           
           {/* Shorter version for mobile */}

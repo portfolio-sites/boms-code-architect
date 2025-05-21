@@ -31,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-deep-blue/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
+    <header className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#1D4ED8]/95 backdrop-blur-sm shadow-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between py-4">
           <a href="#" className="text-white font-grotesk text-xl md:text-2xl font-bold">
@@ -68,7 +68,7 @@ const Navbar = () => {
       
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-deep-blue">
+        <div className="md:hidden bg-[#1D4ED8]">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a onClick={() => scrollToSection('about')} className="text-white py-2 px-4 cursor-pointer">About</a>
             <a onClick={() => scrollToSection('expertise')} className="text-white py-2 px-4 cursor-pointer">What I Do</a>
