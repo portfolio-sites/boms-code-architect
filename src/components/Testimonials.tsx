@@ -56,16 +56,16 @@ const Testimonials = () => {
         
         <div className="max-w-3xl mx-auto relative">
           {/* Active testimonial with animation */}
-          <Card className="bg-white/10 backdrop-blur-sm border-0 mb-8 animate-fade-in relative overflow-hidden">
+          <Card className="bg-[#0A1F44]/90 backdrop-blur-sm border border-white/20 shadow-xl mb-8 animate-fade-in relative overflow-hidden">
             <CardContent className="pt-8 pb-4">
-              <div className="absolute top-4 left-4 text-white/20">
-                <Quote size={32} />
+              <div className="absolute top-4 left-4 text-white/30">
+                <Quote size={42} />
               </div>
-              <p className="text-xl md:text-2xl text-center mb-4 font-light px-4 md:px-8 pt-6">
+              <p className="text-xl md:text-2xl text-center mb-4 font-medium px-4 md:px-8 pt-6 text-white leading-relaxed">
                 "{testimonials[activeTestimonial].text}"
               </p>
             </CardContent>
-            <CardFooter className="text-white/80 justify-center pb-6 flex flex-col">
+            <CardFooter className="text-white justify-center pb-6 flex flex-col">
               <div className="text-center">
                 <div className="w-12 h-12 rounded-full mx-auto mb-2 overflow-hidden shadow-lg">
                   <div className={`w-full h-full bg-gradient-to-br ${
@@ -75,7 +75,7 @@ const Testimonials = () => {
                   }`}></div>
                 </div>
                 <p className="font-medium text-white">— {testimonials[activeTestimonial].author}</p>
-                <p className="text-sm text-white/70">{testimonials[activeTestimonial].company}</p>
+                <p className="text-sm text-white/80">{testimonials[activeTestimonial].company}</p>
               </div>
             </CardFooter>
           </Card>
