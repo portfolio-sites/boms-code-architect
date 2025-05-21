@@ -1,11 +1,11 @@
 
 /* Modern base styles - overridden by Tailwind */
 :root {
-  --primary-color: #B8860B;
-  --secondary-color: #D4AF37;
-  --accent-color: #F0E6BF;
-  --text-color: #0B1D31;
-  --bg-color: #F9F6F0;
+  --primary-color: #6366F1;
+  --secondary-color: #D4B67E;
+  --accent-color: #E9D7B7;
+  --text-color: #1E293B;
+  --bg-color: #FAFAFA;
 }
 
 #root {
@@ -16,7 +16,7 @@
   overflow-x: hidden;
 }
 
-/* Logo styling with gold accent */
+/* Logo styling with subtle accent */
 .logo {
   height: auto;
   will-change: filter;
@@ -24,7 +24,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em rgba(212, 175, 55, 0.6));
+  filter: drop-shadow(0 0 2em rgba(99, 102, 241, 0.5));
 }
 
 @keyframes logo-spin {
@@ -42,11 +42,11 @@
   }
 }
 
-/* Luxury elements */
-.gold-accent {
-  background: linear-gradient(90deg, #B8860B, #D4AF37, #B8860B);
+/* Modern elements */
+.modern-accent {
+  background: linear-gradient(90deg, #6366F1, #D4B67E, #6366F1);
   background-size: 200% auto;
-  animation: shimmer 2s infinite linear;
+  animation: shimmer 3s infinite linear;
 }
 
 @keyframes shimmer {
@@ -58,52 +58,52 @@
   }
 }
 
-.gold-border {
-  border: 1px solid rgba(212, 175, 55, 0.3);
+.subtle-border {
+  border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
-/* Royal card effects */
-.royal-card {
+/* Modern card effects */
+.modern-card {
   background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 10px 40px -15px rgba(184, 134, 11, 0.2);
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.royal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 50px -15px rgba(184, 134, 11, 0.3);
+.modern-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.15);
 }
 
-.royal-button {
-  background: linear-gradient(90deg, #B8860B, #D4AF37);
-  color: #0B1D31;
-  font-weight: 600;
+.modern-button {
+  background: linear-gradient(90deg, #6366F1, #4F46E5);
+  color: white;
+  font-weight: 500;
   padding: 0.75rem 1.5rem;
-  border-radius: 2rem;
+  border-radius: 0.375rem;
   transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
 }
 
-.royal-button:hover {
-  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.5);
-  transform: translateY(-2px);
+.modern-button:hover {
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+  transform: translateY(-1px);
 }
 
 /* Decorative elements */
-.gold-divider {
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+.subtle-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #CBD5E1, transparent);
   margin: 2rem auto;
   width: 80%;
   max-width: 100px;
 }
 
-/* Elegant typography */
-.elegant-heading {
-  font-family: 'Playfair Display', serif;
-  background: linear-gradient(90deg, #B8860B, #D4AF37);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Modern typography */
+.modern-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1E293B;
 }

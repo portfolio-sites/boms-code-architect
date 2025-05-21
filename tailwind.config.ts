@@ -68,19 +68,30 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'deep-gold': '#B8860B',
-				'royal-gold': '#D4AF37',
-				'champagne': '#F9F1E7',
-				'dark-navy': '#0B1D31',
-				'navy-blue': '#1A3A5E',
-				'slate-blue': '#293952',
-				'light-beige': '#F9F6F0',
-				'warm-beige': '#F0E9D6',
-				'soft-cream': '#FCF9F3',
-				'soft-gold': '#F0E6BF',
-				'soft-burgundy': '#8E3636',
-				'soft-emerald': '#36634C',
-				'royal-blue': '#2563EB', // Added royal-blue color
+				// New modern, softer color palette
+				'slate-100': '#F1F5F9',
+				'slate-200': '#E2E8F0',
+				'slate-300': '#CBD5E1',
+				'slate-400': '#94A3B8',
+				'slate-500': '#64748B',
+				'slate-600': '#475569',
+				'slate-700': '#334155',
+				'slate-800': '#1E293B',
+				'slate-900': '#0F172A',
+				'indigo-50': '#EEF2FF',
+				'indigo-100': '#E0E7FF',
+				'indigo-200': '#C7D2FE',
+				'indigo-300': '#A5B4FC',
+				'indigo-400': '#818CF8',
+				'indigo-500': '#6366F1',
+				'indigo-600': '#4F46E5',
+				'indigo-700': '#4338CA',
+				'accent-gold': '#D4B67E',
+				'accent-gold-light': '#E9D7B7',
+				'accent-gold-dark': '#B89C62',
+				'soft-white': '#FAFAFA',
+				'off-white': '#F7F7F7',
+				'royal-blue': '#2563EB',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -132,12 +143,20 @@ export default {
 						transform: 'translateY(-10px)'
 					}
 				},
-				'glow': {
+				'subtle-float': {
 					'0%, 100%': {
-						boxShadow: '0 0 5px rgba(184, 134, 11, 0.3)'
+						transform: 'translateY(0)'
 					},
 					'50%': {
-						boxShadow: '0 0 20px rgba(184, 134, 11, 0.6)'
+						transform: 'translateY(-5px)'
+					}
+				},
+				'subtle-pulse': {
+					'0%, 100%': {
+						opacity: '0.8'
+					},
+					'50%': {
+						opacity: '1'
 					}
 				},
 				'gradient-shift': {
@@ -174,7 +193,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'slide-in': 'slide-in 0.3s ease-out forwards',
 				'float': 'float 6s ease-in-out infinite',
-				'glow': 'glow 2s ease-in-out infinite',
+				'subtle-float': 'subtle-float 4s ease-in-out infinite',
+				'subtle-pulse': 'subtle-pulse 3s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 8s ease infinite',
 				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
 				'shimmer': 'shimmer 2s infinite linear',
