@@ -33,7 +33,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => scrollToSection('projects')}
-              className="border-white text-white hover:bg-white/10 text-lg"
+              className="border-white text-black hover:bg-white/10 hover:text-white text-lg"
             >
               View My Work
             </Button>

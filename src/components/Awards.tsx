@@ -67,21 +67,40 @@ const Awards = () => {
           </Card>
         </div>
         
-        <div className="mt-12 text-center">
-          <div className="flex flex-wrap justify-center gap-8 mt-8">
-            <div className="w-32 h-32 bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-center mb-6">Companies I've Worked With</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
               <img 
                 src="/lovable-uploads/e9ba93a9-bc30-4911-9119-7e316fb0ef99.png" 
                 alt="MTC Media logo" 
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full h-16 object-contain mb-2"
               />
+              <p className="font-medium text-center text-sm mt-2">MTC Media</p>
+              <p className="text-xs text-gray-500 text-center">Backend Architecture</p>
             </div>
-            <div className="w-32 h-32 bg-white p-4 rounded-lg shadow-md flex items-center justify-center">
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
               <img 
                 src="/lovable-uploads/4406eb65-8acc-411b-97f3-bb0179745128.png" 
                 alt="MTech Communications logo" 
-                className="max-w-full max-h-full object-contain"
+                className="max-w-full h-16 object-contain mb-2"
               />
+              <p className="font-medium text-center text-sm mt-2">MTech Communications</p>
+              <p className="text-xs text-gray-500 text-center">System Design</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+              <div className="h-16 flex items-center justify-center mb-2">
+                <span className="font-bold text-xl text-deep-blue">Fintech Co.</span>
+              </div>
+              <p className="font-medium text-center text-sm mt-2">Fintech Co.</p>
+              <p className="text-xs text-gray-500 text-center">API Development</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+              <div className="h-16 flex items-center justify-center mb-2">
+                <span className="font-bold text-xl text-deep-blue">Gov Health</span>
+              </div>
+              <p className="font-medium text-center text-sm mt-2">Gov Health</p>
+              <p className="text-xs text-gray-500 text-center">Infrastructure</p>
             </div>
           </div>
         </div>
