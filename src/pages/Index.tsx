@@ -14,10 +14,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Awards from "@/components/Awards";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useTheme } from "@/components/theme-provider";
 
 const Index = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [activeSection, setActiveSection] = useState<string>("hero");
+  const { theme, resolvedTheme } = useTheme();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -64,7 +66,7 @@ const Index = () => {
   };
   
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden bg-gray-50 dark:bg-gray-900">
+    <div className={`min-h-screen flex flex-col overflow-x-hidden ${resolvedTheme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}>
       <Navbar />
       <Hero />
       <About />
@@ -84,21 +86,21 @@ const Index = () => {
         {showScrollButton && (
           <Button 
             onClick={scrollToTop}
-            className="bg-emerald-600 hover:bg-emerald-700 dark:bg-emerald-700 dark:hover:bg-emerald-600 text-white p-3 rounded-full shadow-xl transition-all hover:scale-110"
+            className="bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white p-3 rounded-full shadow-md transition-all hover:scale-105"
             variant="default"
             size="icon"
             aria-label="Scroll to top"
           >
-            <ArrowUp size={24} />
+            <ArrowUp size={20} />
           </Button>
         )}
       </div>
       
       <style>
         {`
-        @keyframes growWidth {
-          from { width: 0; }
-          to { width: 100%; }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
         }
         
         section {
@@ -107,15 +109,7 @@ const Index = () => {
         
         .animate-fade-in {
           opacity: 0;
-          transform: translateY(10px);
-          animation: fadeIn 0.5s ease-out forwards;
-        }
-        
-        @keyframes fadeIn {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          animation: fadeIn 0.6s ease-out forwards;
         }
         `}
       </style>
