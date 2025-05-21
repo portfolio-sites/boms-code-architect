@@ -46,17 +46,19 @@ const Footer = () => {
           </div>
           
           {/* Column 2 - Contact */}
-          <div>
-            <h3 className="text-lg font-grotesk font-bold mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-white/80 font-normal">Swieqi, Malta</li>
-              <li className="text-white/80 font-normal flex items-center">
-                <Mail size={16} className="mr-2" /> 
-                <a href="mailto:Steffanie07@gmail.com" className="hover:text-white transition-colors">
-                  Steffanie07@gmail.com
-                </a>
-              </li>
-            </ul>
+          <div className="md:flex md:justify-end">
+            <div>
+              <h3 className="text-lg font-grotesk font-bold mb-4">Contact</h3>
+              <ul className="space-y-2">
+                <li className="text-white/80 font-normal">Swieqi, Malta</li>
+                <li className="text-white/80 font-normal flex items-center">
+                  <Mail size={16} className="mr-2" /> 
+                  <a href="mailto:Steffanie07@gmail.com" className="hover:text-white transition-colors">
+                    Steffanie07@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         

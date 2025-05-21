@@ -51,7 +51,7 @@ const Testimonials = () => {
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">Reviews from Previous Companies</h2>
           <Separator className="w-16 h-1 bg-white mx-auto mb-6" />
-          <p className="text-white/80">Feedback from professionals I've worked with throughout my career</p>
+          <p className="text-white/80">Feedback from a few professionals I've worked with throughout my career</p>
         </div>
         
         <div className="max-w-3xl mx-auto relative">
