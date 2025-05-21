@@ -25,14 +25,19 @@ export default {
 				body: ['"Inter"', 'sans-serif'],
 			},
 			colors: {
-				// Monochromatic palette
-				black: '#000000', // Pure black for strong contrast
-				charcoal: '#222222', // Dark grey for backgrounds
-				graphite: '#555555', // Medium grey for text
-				silver: '#999999', // Light grey for secondary elements
-				lightgrey: '#CCCCCC', // Even lighter grey for borders, etc
-				offwhite: '#F5F5F5', // Off-white for backgrounds
-				white: '#FFFFFF', // Pure white
+				// Modern sophisticated palette
+				black: '#0A0A0A',     // Soft black for primary text
+				charcoal: '#191919',  // Rich background color
+				graphite: '#2D2D2D',  // Medium tones for UI elements
+				steel: '#414141',     // Interactive elements
+				silver: '#737373',    // Secondary text
+				stone: '#A3A3A3',     // Subtle accents
+				fog: '#D1D1D1',       // Borders and dividers
+				mist: '#E5E5E5',      // Subtle backgrounds
+				chalk: '#F5F5F5',     // Light backgrounds
+				white: '#FFFFFF',     // Pure white
+				
+				accent: '#404040',    // Subtle accent for interactivity
 				
 				// Keep system colors for components
 				border: 'hsl(var(--border))',

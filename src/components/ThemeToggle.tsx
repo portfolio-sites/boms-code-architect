@@ -1,8 +1,6 @@
 
-import { Button } from "@/components/ui/button";
-
+// This component is intentionally empty as we've moved to a unified design theme
 const ThemeToggle = () => {
-  // This component is essentially a placeholder now since we've removed dark/light mode toggle
   return null;
 };
 

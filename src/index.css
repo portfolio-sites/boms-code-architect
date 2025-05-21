@@ -10,32 +10,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 13%;
+    --background: 0 0% 10%;
     --foreground: 0 0% 98%;
 
-    --card: 0 0% 13%;
+    --card: 0 0% 10%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 13%;
+    --popover: 0 0% 10%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 20%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 60%;
+    --secondary: 0 0% 45%;
     --secondary-foreground: 0 0% 0%;
 
     --muted: 0 0% 20%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 0 0% 20%;
+    --accent: 0 0% 25%;
     --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 0% 30%;
+    --destructive: 0 0% 25%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 25%;
-    --input: 0 0% 25%;
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
     --ring: 0 0% 35%;
 
     --radius: 0.3rem;
@@ -72,7 +72,7 @@
   }
   
   p {
-    @apply text-silver leading-relaxed font-light;
+    @apply text-stone leading-relaxed font-light;
   }
   
   code, pre, .code {
@@ -107,37 +107,37 @@
 
 /* Glass effect */
 .glass {
-  @apply bg-charcoal/50 backdrop-blur-sm border border-white/10 shadow-sm;
+  @apply bg-graphite/30 backdrop-blur-sm border border-white/5 shadow-sm;
 }
 
 /* Gradient buttons */
 .btn-gradient {
-  @apply bg-gradient-to-r from-graphite to-charcoal hover:from-charcoal hover:to-black transition-all duration-300;
+  @apply bg-gradient-to-r from-steel to-graphite hover:from-graphite hover:to-steel transition-all duration-300;
 }
 
 /* Animated borders */
 .animated-border {
-  @apply relative after:absolute after:inset-0 after:p-[1px] after:rounded after:bg-gradient-to-r after:from-graphite after:via-silver after:to-graphite after:content-[''] after:animate-gradient-shift after:opacity-30;
+  @apply relative after:absolute after:inset-0 after:p-[1px] after:rounded after:bg-gradient-to-r after:from-steel after:via-silver after:to-steel after:content-[''] after:animate-gradient-shift after:opacity-20;
 }
 
 /* Card hover effects */
 .card-hover {
-  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-sm;
+  @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-md;
 }
 
 /* Elegant hover effect */
 .elegant-hover {
-  @apply transition-all duration-300 ease-in-out hover:shadow-[0_5px_15px_-10px_rgba(0,0,0,0.15)];
+  @apply transition-all duration-300 ease-in-out hover:shadow-[0_5px_15px_-10px_rgba(0,0,0,0.2)];
 }
 
 /* Gradient text */
 .gradient-text {
-  @apply bg-gradient-to-r from-graphite to-silver bg-clip-text text-transparent;
+  @apply bg-gradient-to-r from-silver to-fog bg-clip-text text-transparent;
 }
 
 /* Minimal border */
 .minimal-border {
-  @apply border border-charcoal/20;
+  @apply border border-steel/20;
 }
 
 /* Modern shadow */
@@ -147,7 +147,7 @@
 
 /* Modern card */
 .modern-card {
-  @apply bg-offwhite border border-charcoal/10 hover:shadow-sm transition-shadow duration-300;
+  @apply bg-chalk border border-silver/10 hover:shadow-sm transition-shadow duration-300;
 }
 
 /* Animation Helpers */
