@@ -1,11 +1,11 @@
 
 /* Modern base styles - overridden by Tailwind */
 :root {
-  --primary-color: #3A5CC9;
-  --secondary-color: #2563EB;
-  --accent-color: #BED0F7;
-  --text-color: #1F2937;
-  --bg-color: #F9FAFB;
+  --primary-color: #B8860B;
+  --secondary-color: #D4AF37;
+  --accent-color: #F0E6BF;
+  --text-color: #0B1D31;
+  --bg-color: #F9F6F0;
 }
 
 #root {
@@ -16,7 +16,7 @@
   overflow-x: hidden;
 }
 
-/* Remove default unnecessary styles */
+/* Logo styling with gold accent */
 .logo {
   height: auto;
   will-change: filter;
@@ -24,7 +24,7 @@
 }
 
 .logo:hover {
-  filter: drop-shadow(0 0 2em rgba(58, 92, 201, 0.6));
+  filter: drop-shadow(0 0 2em rgba(212, 175, 55, 0.6));
 }
 
 @keyframes logo-spin {
@@ -40,4 +40,70 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
+}
+
+/* Luxury elements */
+.gold-accent {
+  background: linear-gradient(90deg, #B8860B, #D4AF37, #B8860B);
+  background-size: 200% auto;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+/* Royal card effects */
+.royal-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 40px -15px rgba(184, 134, 11, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.royal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px -15px rgba(184, 134, 11, 0.3);
+}
+
+.royal-button {
+  background: linear-gradient(90deg, #B8860B, #D4AF37);
+  color: #0B1D31;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(184, 134, 11, 0.3);
+}
+
+.royal-button:hover {
+  box-shadow: 0 8px 25px rgba(184, 134, 11, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Decorative elements */
+.gold-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 2rem auto;
+  width: 80%;
+  max-width: 100px;
+}
+
+/* Elegant typography */
+.elegant-heading {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(90deg, #B8860B, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

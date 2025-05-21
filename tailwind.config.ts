@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				grotesk: ['"Space Grotesk"', 'sans-serif'],
-				inter: ['"Inter"', 'sans-serif'],
+				serif: ['"Playfair Display"', 'serif'],
+				sans: ['"Montserrat"', 'sans-serif'],
 				mono: ['"JetBrains Mono"', 'monospace'],
 			},
 			colors: {
@@ -68,17 +68,18 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'deep-blue': '#1A1A2E',
-				'royal-blue': '#3A5CC9',
-				'vivid-blue': '#2563EB',
-				'soft-blue': '#BED0F7',
-				'midnight': '#0A1F44', 
-				'slate-gray': '#64748B',
-				'light-gray': '#F1F5F9',
-				'warm-gray': '#E2E8F0',
-				'soft-yellow': '#FEF7CD',
-				'soft-green': '#F2FCE2',
-				'soft-purple': '#E5DEFF',
+				'deep-gold': '#B8860B',
+				'royal-gold': '#D4AF37',
+				'champagne': '#F9F1E7',
+				'dark-navy': '#0B1D31',
+				'navy-blue': '#1A3A5E',
+				'slate-blue': '#293952',
+				'light-beige': '#F9F6F0',
+				'warm-beige': '#F0E9D6',
+				'soft-cream': '#FCF9F3',
+				'soft-gold': '#F0E6BF',
+				'soft-burgundy': '#8E3636',
+				'soft-emerald': '#36634C',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -132,10 +133,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 5px rgba(37, 99, 235, 0.3)'
+						boxShadow: '0 0 5px rgba(184, 134, 11, 0.3)'
 					},
 					'50%': {
-						boxShadow: '0 0 20px rgba(37, 99, 235, 0.6)'
+						boxShadow: '0 0 20px rgba(184, 134, 11, 0.6)'
 					}
 				},
 				'gradient-shift': {
@@ -157,6 +158,14 @@ export default {
 						opacity: '0.7'
 					}
 				},
+				'shimmer': {
+					'0%': {
+						backgroundPosition: '-1000px 0'
+					},
+					'100%': {
+						backgroundPosition: '1000px 0'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -167,6 +176,7 @@ export default {
 				'glow': 'glow 2s ease-in-out infinite',
 				'gradient-shift': 'gradient-shift 8s ease infinite',
 				'pulse-soft': 'pulse-soft 3s ease-in-out infinite',
+				'shimmer': 'shimmer 2s infinite linear',
 			},
 			backgroundImage: {
 				'hero-pattern': "url('/lovable-uploads/hero-pattern.svg')",
