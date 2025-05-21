@@ -104,7 +104,7 @@ const About = () => {
           {/* Mobile-optimized bio */}
           <div className="prose prose-lg max-w-none">
             <p className="mb-4 text-base md:text-lg text-[#1F2937]">
-              Software Developer and Team Lead with {counts.years}+ years experience building solutions across {counts.countries} countries. Expertise in .NET, Laravel, React, Java, and more.
+              Software Developer and Team Lead with {counts.years}+ years experience building solutions across {counts.countries}+ countries. Expertise in .NET, Laravel, React, Java, and more.
             </p>
             
             <p className="hidden md:block mb-6 text-lg text-[#1F2937]">
@@ -125,7 +125,7 @@ const About = () => {
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="font-grotesk text-2xl md:text-3xl font-bold mb-1 text-[#2563EB]">{counts.countries}+</h3>
-            <p className="text-[#6B7280] text-sm md:text-base">Countries</p>
+            <p className="text-[#6B7280] text-sm md:text-base">Countries worked at remotely</p>
           </div>
           <div className="bg-white p-4 md:p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
             <h3 className="font-grotesk text-2xl md:text-3xl font-bold mb-1 text-[#2563EB]">{counts.systems}+</h3>
