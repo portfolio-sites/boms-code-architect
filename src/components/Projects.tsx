@@ -5,8 +5,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, DialogFooter, DialogClose } from "@/components/ui/dialog";
-import { ExternalLink, Github, ArrowUp } from "lucide-react";
+import { ExternalLink, Github, ArrowUp, X } from "lucide-react";
 import { useEffect } from "react";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 interface Project {
   id: number;
@@ -150,37 +151,43 @@ const Projects = () => {
                 </Card>
               </DialogTrigger>
               
-              <DialogContent className="max-w-3xl">
-                <DialogHeader>
+              <DialogContent className="max-w-3xl max-h-[90vh] flex flex-col overflow-hidden">
+                <DialogHeader className="relative">
                   <Badge className={`mb-2 ${getBadgeColorClasses(project.badgeColor)} w-fit`}>
                     {project.category}
                   </Badge>
-                  <DialogTitle className="text-2xl font-bold">{project.title}</DialogTitle>
+                  <DialogTitle className="text-2xl font-bold pr-8">{project.title}</DialogTitle>
+                  <DialogClose className="absolute top-0 right-0 w-8 h-8 inline-flex items-center justify-center rounded-full hover:bg-gray-200 transition-colors">
+                    <X className="h-4 w-4" />
+                    <span className="sr-only">Close</span>
+                  </DialogClose>
                 </DialogHeader>
                 
-                <div className="space-y-4 py-4">
-                  <div>
-                    <h3 className="font-medium text-lg mb-2">Overview</h3>
-                    <p>{project.fullDescription}</p>
+                <ScrollArea className="flex-1 -mx-6 px-6">
+                  <div className="space-y-4 py-4">
+                    <div>
+                      <h3 className="font-medium text-lg mb-2">Overview</h3>
+                      <p>{project.fullDescription}</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-medium text-lg mb-2">Role</h3>
+                      <p>{project.role}</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-medium text-lg mb-2">Technologies</h3>
+                      <p className="font-mono text-sm">{project.technologies}</p>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-medium text-lg mb-2">Results</h3>
+                      <p>{project.results}</p>
+                    </div>
                   </div>
-                  
-                  <div>
-                    <h3 className="font-medium text-lg mb-2">Role</h3>
-                    <p>{project.role}</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-medium text-lg mb-2">Technologies</h3>
-                    <p className="font-mono text-sm">{project.technologies}</p>
-                  </div>
-                  
-                  <div>
-                    <h3 className="font-medium text-lg mb-2">Results</h3>
-                    <p>{project.results}</p>
-                  </div>
-                </div>
+                </ScrollArea>
                 
-                <DialogFooter className="flex flex-col sm:flex-row gap-2 sm:justify-end">
+                <DialogFooter className="mt-6 flex flex-col sm:flex-row gap-2 items-center justify-center sm:justify-end border-t pt-4">
                   {project.githubLink && (
                     <Button variant="outline" onClick={() => window.open(project.githubLink, '_blank')} className="w-full sm:w-auto font-medium">
                       <Github className="mr-2 h-4 w-4" />
@@ -196,7 +203,10 @@ const Projects = () => {
                   )}
                   
                   <DialogClose asChild>
-                    <Button variant="secondary" className="w-full sm:w-auto">Close</Button>
+                    <Button variant="secondary" className="w-full sm:w-auto">
+                      <X className="mr-2 h-4 w-4" />
+                      Close
+                    </Button>
                   </DialogClose>
                 </DialogFooter>
               </DialogContent>
