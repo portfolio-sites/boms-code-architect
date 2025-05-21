@@ -29,8 +29,8 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-center bg-cover bg-no-repeat opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-[#0A1F44] via-[#0A1F44] to-[#0A1F44]/90"></div>
       
-      {/* Animated grid lines */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
+      {/* Animated grid lines - hide on mobile */}
+      <div className="absolute inset-0 overflow-hidden opacity-20 hidden sm:block">
         <div className="absolute inset-0 grid grid-cols-6 md:grid-cols-12">
           {Array(12).fill(0).map((_, i) => (
             <div key={i} className="border-r border-white/10 h-full"></div>
@@ -45,26 +45,33 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 md:px-8 relative z-10 py-10 md:py-20">
         <div className="max-w-3xl mx-auto text-center">
-          <div className="mb-3 text-[#A3B1C6] text-lg md:text-xl">
+          {/* Tech stack animation - simplify on mobile */}
+          <div className="mb-3 text-[#A3B1C6] text-lg md:text-xl hidden sm:block">
             <span className="font-mono animate-pulse inline-block">&lt;</span>
             <span className="font-mono animate-pulse inline-block">{techStack[currentTechIndex]}</span>
             <span className="font-mono animate-pulse inline-block">/&gt;</span>
           </div>
+          
           <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 animate-fade-in">
             Stephanie Boms
           </h1>
-          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/90 mb-4">Software Developer & Team Lead</span>
-          <h2 className="text-[#A3B1C6] text-lg md:text-xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
+          <span className="block text-xl sm:text-2xl md:text-4xl lg:text-5xl text-white/90 mb-4">Software Developer & Team Lead</span>
+          
+          {/* Mobile-optimized subtitle */}
+          <h2 className="text-[#A3B1C6] text-base md:text-xl lg:text-2xl font-semibold mb-4 animate-fade-in" style={{animationDelay: "0.1s"}}>
             Leading teams to build reliable systems
           </h2>
-          {/* Mobile-optimized description */}
+          
+          {/* Mobile-optimized description - only show on larger screens */}
           <p className="text-[#D6DDEA] text-sm md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-fade-in hidden sm:block" style={{animationDelay: "0.2s"}}>
             Based in Swieqi, Malta, Stephanie brings over 10 years of experience crafting secure, scalable software solutions across healthcare, fintech, gaming, and government sectors. She specializes in driving agile teams to deliver impactful technology that powers everyday services.
           </p>
+          
           {/* Shorter version for mobile */}
           <p className="text-[#D6DDEA] text-sm mb-6 max-w-2xl mx-auto animate-fade-in sm:hidden" style={{animationDelay: "0.2s"}}>
-            10+ years experience in enterprise software development across healthcare, fintech, gaming, and government sectors.
+            10+ years experience in enterprise software development.
           </p>
+          
           <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in" style={{animationDelay: "0.4s"}}>
             <Button 
               size="lg" 
@@ -77,14 +84,16 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               onClick={() => scrollToSection('contact')}
-              className="border-white text-white hover:bg-white/10 text-base md:text-lg font-medium"
+              className="border-white text-black bg-white hover:bg-white/90 text-base md:text-lg font-medium"
             >
               Get in Touch
             </Button>
           </div>
         </div>
       </div>
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      
+      {/* Hide bounce animation on mobile */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
         <Button 
           variant="ghost"
           size="icon"

@@ -188,6 +188,20 @@
   .mobile-card {
     @apply p-4 rounded-lg shadow-sm;
   }
+  
+  /* Improved tap targets for mobile */
+  .mobile-tap-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+  
+  /* Mobile skill indicators */
+  .skill-indicator {
+    @apply w-1.5 h-1.5 rounded-full bg-gray-300;
+  }
+  
+  .skill-indicator.active {
+    @apply bg-[#2563EB];
+  }
 }
 
 /* Fix for overflow issues */
