@@ -46,7 +46,7 @@ const Footer = () => {
           </div>
           
           {/* Column 2 - Contact */}
-          <div className="md:flex md:justify-end">
+          <div className="md:flex md:justify-start">
             <div>
               <h3 className="text-lg font-grotesk font-bold mb-4">Contact</h3>
               <ul className="space-y-2">
