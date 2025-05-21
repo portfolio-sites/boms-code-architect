@@ -46,17 +46,17 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-deep-blue text-white">
+    <section id="testimonials" className="py-16 md:py-24 bg-gradient-to-b from-[#1D4ED8]/95 to-[#0A1F44] text-white">
       <div className="container mx-auto px-4 md:px-8">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">Client Testimonials</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">Reviews from Previous Companies</h2>
           <Separator className="w-16 h-1 bg-white mx-auto mb-6" />
           <p className="text-white/80">Feedback from professionals I've worked with throughout my career</p>
         </div>
         
         <div className="max-w-3xl mx-auto relative">
           {/* Active testimonial with animation */}
-          <Card className="bg-white/10 border-0 mb-8 animate-fade-in relative overflow-hidden">
+          <Card className="bg-white/10 backdrop-blur-sm border-0 mb-8 animate-fade-in relative overflow-hidden">
             <CardContent className="pt-8 pb-4">
               <div className="absolute top-4 left-4 text-white/20">
                 <Quote size={32} />
