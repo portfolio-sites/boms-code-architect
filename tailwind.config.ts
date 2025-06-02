@@ -19,23 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['"Space Grotesk"', '"Montserrat"', 'sans-serif'],
+				sans: ['"Inter"', '"Poppins"', '"Helvetica Neue"', 'sans-serif'],
 				mono: ['"IBM Plex Mono"', 'monospace'],
 				body: ['"Inter"', 'sans-serif'],
 			},
 			colors: {
-				// Modern sophisticated palette
-				black: '#0A0A0A',     // Soft black for primary text
-				charcoal: '#191919',  // Rich background color
-				graphite: '#2D2D2D',  // Medium tones for UI elements
-				steel: '#414141',     // Interactive elements
-				silver: '#737373',    // Secondary text
-				stone: '#A3A3A3',     // Subtle accents
-				fog: '#D1D1D1',       // Borders and dividers
-				mist: '#E5E5E5',      // Subtle backgrounds
-				chalk: '#F5F5F5',     // Light backgrounds
-				white: '#FFFFFF',     // Pure white
-				
 				// Monochromatic palette
 				black: '#000000',
 				white: '#FFFFFF',
@@ -47,13 +35,11 @@ export default {
 				'deep-grey': '#222222',
 				
 				// Accent color - burnt orange
-				orange: '#D35400',
-				'orange-dark': '#A04000',
-				'orange-light': '#E67E22',
+				accent: '#D35400',
+				'accent-hover': '#A04000',
+				'accent-light': '#E67E22',
 				gold: '#F39C12',
 				beige: '#F5F5F5',
-				
-				accent: '#404040',    // Subtle accent for interactivity
 				
 				// Keep system colors for components
 				border: 'hsl(var(--border))',
