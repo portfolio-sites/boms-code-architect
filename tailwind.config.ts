@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -15,7 +14,7 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
-				'2xl': '1400px'
+				'2xl': '1200px'
 			}
 		},
 		extend: {
@@ -36,6 +35,23 @@ export default {
 				mist: '#E5E5E5',      // Subtle backgrounds
 				chalk: '#F5F5F5',     // Light backgrounds
 				white: '#FFFFFF',     // Pure white
+				
+				// Monochromatic palette
+				black: '#000000',
+				white: '#FFFFFF',
+				'off-white': '#F5F5F5',
+				'light-grey': '#F9F9F9',
+				'border-grey': '#E0E0E0',
+				'input-border': '#CCCCCC',
+				'mid-grey': '#555555',
+				'deep-grey': '#222222',
+				
+				// Accent color - burnt orange
+				orange: '#D35400',
+				'orange-dark': '#A04000',
+				'orange-light': '#E67E22',
+				gold: '#F39C12',
+				beige: '#F5F5F5',
 				
 				accent: '#404040',    // Subtle accent for interactivity
 				
@@ -78,6 +94,15 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 0.1rem)',
 				sm: 'calc(var(--radius) - 0.2rem)'
+			},
+			spacing: {
+				'section': '60px',
+			},
+			maxWidth: {
+				'content': '1200px',
+			},
+			lineHeight: {
+				'readable': '1.6',
 			},
 			keyframes: {
 				'fade-in': {
